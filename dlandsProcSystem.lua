@@ -56,14 +56,16 @@ local tryPull = {}
 --Adds an inventory name to a table,
 --while also putting it into the
 --scanFuncList and scanResults.
-local function addInv(invName, tableToAddTo, pullSlots)
-	table.insert(invName, tableToAddTo)
+local function addInv(tableToAddTo, invName, pullSlots)
+	table.insert(tableToAddTo, invName)
 	local periRef = fastWrap(invName)
 	table.insert(scanFuncList, function()
 		scanResults[invName] = fastWrap(invName).list()
 	end)
-	for _, slot in pairs(pullSlots) do
-		table.insert(tryPull, {invName, slot})
+	if pullSlots then
+		for _, slot in pairs(pullSlots) do
+			table.insert(tryPull, {invName, slot})
+		end
 	end
 end
 
@@ -74,7 +76,9 @@ local mowl = {}
 mowl["minecraft:iron_ore"] = "wig"
 mowl["minecraft:deepslate_iron_ore"] = "wig"
 mowl["deeperdarker:sculk_stone_iron_ore"] = "wig"
-
+mowl["minecraft:redstone_ore"] = "wig"
+mowl["minecraft:deepslate_redstone_ore"] = "wig"
+mowl["deeperdarker:sculk_stone_redstone_ore"] = "wig"
 
 --Constants
 
@@ -190,3 +194,5 @@ local function mainLoop()
 		itemMoveFuncList = {}
 	end
 end
+
+mainLoop()
