@@ -73,6 +73,10 @@ end
 
 --Short for move out whitelist.
 local mowl = {}
+--Water grinders
+mowl["minecraft:coal_ore"] = "wig"
+mowl["minecraft:deepslate_coal_ore"] = "wig"
+mowl["deeperdarker:sculk_stone_coal_ore"] = "wig"
 mowl["minecraft:iron_ore"] = "wig"
 mowl["minecraft:deepslate_iron_ore"] = "wig"
 mowl["deeperdarker:sculk_stone_iron_ore"] = "wig"
@@ -82,6 +86,25 @@ mowl["deeperdarker:sculk_stone_redstone_ore"] = "wig"
 mowl["minecraft:lapis_ore"] = "wig"
 mowl["minecraft:deepslate_lapis_ore"] = "wig"
 mowl["deeperdarker:sculk_stone_lapis_ore"] = "wig"
+mowl["techreborn:bauxite_ore"] = "wig"
+mowl["techreborn:deepslate_bauxite_ore"] = "wig"
+mowl["techreborn:galena_ore"] = "wig"
+mowl["techreborn:deepslate_galena_ore"] = "wig"
+--Mercury grinders
+
+--Sodium Persulphate grinders
+
+--Crushing wheels
+mowl["minecraft:raw_iron"] = "ccr"
+mowl["minecraft:raw_copper"] = "ccr"
+mowl["minecraft:raw_gold"] = "ccr"
+mowl["create:zinc_ore"] = "ccr"
+mowl["create:deepslate_zinc_ore"] = "ccr"
+
+--3x3 Compaction
+mowl["minecraft:gold_nugget"] = "3x3"
+mowl["techreborn:nickel_nugget"] = "3x3"
+mowl["techreborn:tin_nugget"] = "3x3"
 
 --Constants
 
@@ -89,7 +112,26 @@ local esB = "expandedstorage:barrel_"
 
 local tIG = "techreborn:industrial_grinder_"
 
+local table27 = {1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21,22,23,24,25,26,27}
+
+local genImports = {}
+addInv(genImports, "minecraft:barrel_5", table27)
+addInv(genImports, "minecraft:barrel_4", table27)
+
+local c3x3 = "minecraft:barrel_2"
+table.insert(scanFuncList, function()
+	scanResults[c3x3] = fastWrap(c3x3).list()
+end)
+
+local cCr = esB.."10"
+table.insert(scanFuncList, function()
+	scanResults[cCr] = fastWrap(cCr).list()
+end)
+
 local exportBuffer = "expandedstorage:chest_4"
+table.insert(scanFuncList, function()
+	scanResults[exportBuffer] = fastWrap(exportBuffer).list()
+end)
 
 local importBuffer = esB.."9"
 table.insert(scanFuncList, function()
@@ -151,8 +193,18 @@ local function findSlotToSendTo(invName, slotNum, tc)
 				outMoveFunc(invName, slotNum, tn, 1)
 			end
 		end
-	else
-		
+	elseif tc == "ccr" then
+		for slot = 1, 81 do
+			if not scanResults[cCr][slot] then
+				outMoveFunc(invName, slotNum, cCr, slot)
+			end
+		end
+	elseif tc == "3x3" then
+		for slot = 1, 27 do
+			if not scanResults[c3x3][slot] then
+				outMoveFunc(invName, slotNum, c3x3, slot)
+			end
+		end
 	end
 end
 
