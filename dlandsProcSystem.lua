@@ -79,12 +79,17 @@ mowl["deeperdarker:sculk_stone_iron_ore"] = "wig"
 mowl["minecraft:redstone_ore"] = "wig"
 mowl["minecraft:deepslate_redstone_ore"] = "wig"
 mowl["deeperdarker:sculk_stone_redstone_ore"] = "wig"
+mowl["minecraft:lapis_ore"] = "wig"
+mowl["minecraft:deepslate_lapis_ore"] = "wig"
+mowl["deeperdarker:sculk_stone_lapis_ore"] = "wig"
 
 --Constants
 
 local esB = "expandedstorage:barrel_"
 
 local tIG = "techreborn:industrial_grinder_"
+
+local exportBuffer = "expandedstorage:chest_4"
 
 local importBuffer = esB.."9"
 table.insert(scanFuncList, function()
