@@ -94,6 +94,8 @@ mowl["techreborn:ruby_ore"] = "wig"
 mowl["techreborn:deepslate_ruby_ore"] = "wig"
 mowl["techreborn:sapphire_ore"] = "wig"
 mowl["techreborn:deepslate_sapphire_ore"] = "wig"
+mowl["techreborn:lead_ore"] = "wig"
+mowl["techreborn:deepslate_lead_ore"] = "wig"
 --Mercury Grinders
 
 --Sodium Persulphate Grinders
@@ -104,6 +106,7 @@ mowl["minecraft:raw_copper"] = "ccr"
 mowl["minecraft:raw_gold"] = "ccr"
 mowl["create:zinc_ore"] = "ccr"
 mowl["create:deepslate_zinc_ore"] = "ccr"
+mowl["techreborn:raw_lead"] = "ccr"
 
 --3x3 Compaction
 mowl["minecraft:iron_nugget"] = "3x3"
