@@ -73,7 +73,7 @@ end
 
 --Short for move out whitelist.
 local mowl = {}
---Water grinders
+--Water Grinders
 mowl["minecraft:coal_ore"] = "wig"
 mowl["minecraft:deepslate_coal_ore"] = "wig"
 mowl["deeperdarker:sculk_stone_coal_ore"] = "wig"
@@ -90,11 +90,15 @@ mowl["techreborn:bauxite_ore"] = "wig"
 mowl["techreborn:deepslate_bauxite_ore"] = "wig"
 mowl["techreborn:galena_ore"] = "wig"
 mowl["techreborn:deepslate_galena_ore"] = "wig"
---Mercury grinders
+mowl["techreborn:ruby_ore"] = "wig"
+mowl["techreborn:deepslate_ruby_ore"] = "wig"
+mowl["techreborn:sapphire_ore"] = "wig"
+mowl["techreborn:deepslate_sapphire_ore"] = "wig"
+--Mercury Grinders
 
---Sodium Persulphate grinders
+--Sodium Persulphate Grinders
 
---Crushing wheels
+--Crushing Wheels
 mowl["minecraft:raw_iron"] = "ccr"
 mowl["minecraft:raw_copper"] = "ccr"
 mowl["minecraft:raw_gold"] = "ccr"
@@ -102,9 +106,33 @@ mowl["create:zinc_ore"] = "ccr"
 mowl["create:deepslate_zinc_ore"] = "ccr"
 
 --3x3 Compaction
+mowl["minecraft:iron_nugget"] = "3x3"
 mowl["minecraft:gold_nugget"] = "3x3"
 mowl["techreborn:nickel_nugget"] = "3x3"
 mowl["techreborn:tin_nugget"] = "3x3"
+mowl["techreborn:copper_nugget"] = "3x3"
+mowl["techreborn:zinc_nugget"] = "3x3"
+mowl["create:copper_nugget"] = "3x3"
+mowl["create:zinc_nugget"] = "3x3"
+
+--2x2 Compaction
+mowl["techreborn:glowstone_small_dust"] = "2x2"
+mowl["techreborn:tungsten_small_dust"] = "2x2"
+
+--Industrial Blast Furnaces
+mowl["techreborn:galena_dust"] = "ibf"
+mowl["techreborn:aluminum_dust"] = "ibf"
+
+--Bulk Washing
+mowl["create:crushed_raw_iron"] = "bwa"
+mowl["create:crushed_raw_gold"] = "bwa"
+mowl["create:crushed_raw_copper"] = "bwa"
+mowl["create:crushed_raw_zinc"] = "bwa"
+
+--Bulk (WIP)
+
+--One-Offs
+mowl["create:experience_nugget"] = "den"
 
 --Constants
 
@@ -117,15 +145,37 @@ local table27 = {1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21,22,23,24,
 local genImports = {}
 addInv(genImports, "minecraft:barrel_5", table27)
 addInv(genImports, "minecraft:barrel_4", table27)
+addInv(genImports, "minecraft:barrel_15", table27)
+addInv(genImports, "minecraft:barrel_12", table27)
 
 local c3x3 = "minecraft:barrel_2"
 table.insert(scanFuncList, function()
 	scanResults[c3x3] = fastWrap(c3x3).list()
 end)
 
+local c2x2 = "minecraft:barrel_8"
+table.insert(scanFuncList, function()
+	scanResults[c2x2] = fastWrap(c2x2).list()
+end)
+
+local bwa = "minecraft:barrel_10"
+table.insert(scanFuncList, function()
+	scanResults[bwa] = fastWrap(bwa).list()
+end)
+
 local cCr = esB.."10"
 table.insert(scanFuncList, function()
 	scanResults[cCr] = fastWrap(cCr).list()
+end)
+
+local dEn = "minecraft:barrel_6"
+table.insert(scanFuncList, function()
+	scanResults[dEn] = fastWrap(dEn).list()
+end)
+
+local ibf = "minecraft:chest_0"
+table.insert(scanFuncList, function()
+	scanResults[ibf] = fastWrap(ibf).list()
 end)
 
 local exportBuffer = "expandedstorage:chest_4"
@@ -205,12 +255,42 @@ local function findSlotToSendTo(invName, slotNum, tc)
 				outMoveFunc(invName, slotNum, c3x3, slot)
 			end
 		end
+	elseif tc == "2x2" then
+		for slot = 1, 27 do
+			if not scanResults[c2x2][slot] then
+				outMoveFunc(invName, slotNum, c2x2, slot)
+			end
+		end
+	elseif tc == "den" then
+		for slot = 1, 27 do
+			if not scanResults[dEn][slot] then
+				outMoveFunc(invName, slotNum, dEn, slot)
+			end
+		end
+	elseif tc == "ibf" then
+		for slot = 1, 54 do
+			if not scanResults[ibf][slot] then
+				outMoveFunc(invName, slotNum, ibf, slot)
+			end
+		end
+	elseif tc == "bwa" then
+		for slot = 1, 27 do
+			if not scanResults[bwa][slot] then
+				outMoveFunc(invName, slotNum, bwa, slot)
+			end
+		end
 	end
 end
 
 local function sendItemToWhere(invName, slotNum, eName)
 	if mowl[eName] then
 		findSlotToSendTo(invName, slotNum, mowl[eName])
+	else
+		for slot = 1, 54 do
+			if not scanResults[exportBuffer][slot] then
+				outMoveFunc(invName, slotNum, exportBuffer, slot)
+			end
+		end
 	end
 end
 
