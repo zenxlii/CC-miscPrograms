@@ -118,6 +118,15 @@ mowl["create:zinc_nugget"] = "3x3"
 --2x2 Compaction
 mowl["techreborn:glowstone_small_dust"] = "2x2"
 mowl["techreborn:tungsten_small_dust"] = "2x2"
+mowl["techreborn:ruby_small_dust"] = "2x2"
+mowl["techreborn:sapphire_small_dust"] = "2x2"
+mowl["techreborn:red_garnet_small_dust"] = "2x2"
+mowl["techreborn:peridot_small_dust"] = "2x2"
+
+--1x1 Crafting
+mowl["minecraft:raw_iron_block"] = "1x1"
+mowl["minecraft:raw_gold_block"] = "1x1"
+mowl["minecraft:raw_copper_block"] = "1x1"
 
 --Industrial Blast Furnaces
 mowl["techreborn:galena_dust"] = "ibf"
@@ -130,6 +139,10 @@ mowl["create:crushed_raw_copper"] = "bwa"
 mowl["create:crushed_raw_zinc"] = "bwa"
 
 --Bulk (WIP)
+
+--Smelting
+mowl["techreborn:zinc_dust"] = "smt"
+mowl["techreborn:nickel_dust"] = "smt"
 
 --One-Offs
 mowl["create:experience_nugget"] = "den"
@@ -147,6 +160,7 @@ addInv(genImports, "minecraft:barrel_5", table27)
 addInv(genImports, "minecraft:barrel_4", table27)
 addInv(genImports, "minecraft:barrel_15", table27)
 addInv(genImports, "minecraft:barrel_12", table27)
+addInv(genImports, "minecraft:barrel_14", table27)
 
 local c3x3 = "minecraft:barrel_2"
 table.insert(scanFuncList, function()
@@ -156,6 +170,11 @@ end)
 local c2x2 = "minecraft:barrel_8"
 table.insert(scanFuncList, function()
 	scanResults[c2x2] = fastWrap(c2x2).list()
+end)
+
+local c1x1 = "minecraft:barrel_7"
+table.insert(scanFuncList, function()
+	scanResults[c1x1] = fastWrap(c1x1).list()
 end)
 
 local bwa = "minecraft:barrel_10"
@@ -176,6 +195,11 @@ end)
 local ibf = "minecraft:chest_0"
 table.insert(scanFuncList, function()
 	scanResults[ibf] = fastWrap(ibf).list()
+end)
+
+local smt = "techreborn:electric_furnace_1"
+table.insert(scanFuncList, function()
+	scanResults[smt] = fastWrap(smt).list()
 end)
 
 local exportBuffer = "expandedstorage:chest_4"
@@ -261,6 +285,12 @@ local function findSlotToSendTo(invName, slotNum, tc)
 				outMoveFunc(invName, slotNum, c2x2, slot)
 			end
 		end
+	elseif tc == "1x1" then
+		for slot = 1, 27 do
+			if not scanResults[c1x1][slot] then
+				outMoveFunc(invName, slotNum, c1x1, slot)
+			end
+		end
 	elseif tc == "den" then
 		for slot = 1, 27 do
 			if not scanResults[dEn][slot] then
@@ -278,6 +308,10 @@ local function findSlotToSendTo(invName, slotNum, tc)
 			if not scanResults[bwa][slot] then
 				outMoveFunc(invName, slotNum, bwa, slot)
 			end
+		end
+	elseif tc == "smt" then
+		if not scanResults[smt][1] then
+			outMoveFunc(invName, slotNum, smt, 1)
 		end
 	end
 end
