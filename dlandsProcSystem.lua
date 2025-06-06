@@ -146,6 +146,7 @@ mowl["create:crushed_raw_zinc"] = "bwa"
 --Smelting
 mowl["techreborn:zinc_dust"] = "smt"
 mowl["techreborn:nickel_dust"] = "smt"
+mowl["create:crushed_raw_lead"] = "smt"
 
 --One-Offs
 mowl["create:experience_nugget"] = "den"
