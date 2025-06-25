@@ -12,7 +12,7 @@ end
 --User-Defined Recipes
 
 --Generic Components
-addRecipe({"minecraft:redstone_torch",1},64,{"minecraft:redstone",nil,nil,n.stick})
+addRecipe({"minecraft:redstone_torch",1},64,{n.rs,nil,nil,n.stick})
 addRecipe({n.stick,4},64,{n.plank,nil,nil,n.plank})
 addRecipe({n.plank,4},64,{"minecraft:birch_log"})
 addRecipe({"minecraft:torch",4},64,{"minecraft:charcoal",nil,nil,n.stick})
