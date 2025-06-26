@@ -20,6 +20,7 @@ addRecipe({"minecraft:brick",1},64,{{"minecraft:clay",1}})
 addRecipe({n.stone,1},64,{{n.cobble,1}})
 addRecipe({"minecraft:smooth_stone",1},64,{{n.stone,1}})
 addRecipe({n.refIron,1},64,{{n.iron,1}})
+addRecipe({n.aAlloy,1},64,{{"techreborn:mixed_metal_ingot",1}})
 
 --Final Return Statement
 
