@@ -12,3 +12,40 @@ local commonCodeDisk = config.commonCodeDisk
 --we need to remove the reference to
 --it early.
 config = nil
+
+local gitDir = "dragonlands"
+
+local repo = "https://raw.githubusercontent.com/zenxlii/CC-miscPrograms/"..gitDir.."/configuration/"
+
+local function downloadFile(path, url)
+	--print(string.format("Installing %s to %s", repo..url, path))
+	local response = assert(http.get(repo..url, nil, true), "Failed to get " .. repo..url)
+	local f = assert(fs.open(path, "wb"), "Cannot open file " .. path)
+	f.write(response.readAll())
+	f.close()
+	response.close()
+end
+
+--Delete the old files.
+fs.delete(commonCodeDisk.."/configFiles/allowedShorthands.lua")
+fs.delete("configFiles/bussin.lua")
+fs.delete(commonCodeDisk.."/configFiles/condenseList.lua")
+fs.delete(commonCodeDisk.."/configFiles/config.lua")
+fs.delete("configFiles/config.lua")
+fs.delete("recipes/craftingTable.lua")
+fs.delete("recipes/furnace.lua")
+fs.delete("configFiles/storageList.lua")
+
+--And download the new ones.
+downloadFile(commonCodeDisk.."/configFiles/allowedShorthands.lua", "allowedShorthands.lua")
+downloadFile("configFiles/bussin.lua", "bussin.lua")
+downloadFile(commonCodeDisk.."/configFiles/condenseList.lua", "condenseList.lua")
+downloadFile(commonCodeDisk.."/configFiles/config.lua", "config.lua")
+downloadFile("configFiles/config.lua", "config.lua")
+downloadFile("recipes/craftingTable.lua", "craftingTable.lua")
+downloadFile("recipes/furnace.lua", "furnace.lua")
+downloadFile("configFiles/storageList.lua", "storageList.lua")
+
+print("Config replacement is done!")
+os.sleep(5)
+os.reboot()

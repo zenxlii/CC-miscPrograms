@@ -6,12 +6,12 @@ local batchSize = 250
 
 --The name of the disk used to hold the
 --manifest file.
-local manifestDisk = "FILLED BY mssInstaller.lua"
+local manifestDisk = "disk3"
 
 --The name of the disk used to hold
 --code and data that should be
 --available to all computers in MSS.
-local commonCodeDisk = "FILLED BY mssInstaller.lua"
+local commonCodeDisk = "disk"
 
 --The name of an inventory that is
 --designated for items coming into the
@@ -19,7 +19,7 @@ local commonCodeDisk = "FILLED BY mssInstaller.lua"
 --based on if an item is pending for
 --a task or if it can go into the main
 --storage area.
-local importBuffer = "FILLED BY mssInstaller.lua"
+local importBuffer = "expandedstorage:chest_2"
 
 --The name of an inventory that items
 --are sent to so that client turtles
@@ -28,7 +28,7 @@ local importBuffer = "FILLED BY mssInstaller.lua"
 --the transfers failing but still
 --updating the manifest as if the items
 --were sent successfully.
-local clientExportBuffer = "FILLED BY mssInstaller.lua"
+local clientExportBuffer = "expandedstorage:chest_3"
 
 --The file locations for stuff on the
 --common code disk.

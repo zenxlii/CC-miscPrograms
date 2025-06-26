@@ -10,8 +10,17 @@ clientDumpImportTask["target"] = importBuffer
 clientDumpImportTask["specificSlots"] = false
 table.insert(taskTable, clientDumpImportTask)
 --Add your tasks below here!
+local procSysImportTask = {}
+procSysImportTask["taskType"] = "import"
+procSysImportTask["target"] = "expandedstorage:chest_5"
+procSysImportTask["specificSlots"] = false
+table.insert(taskTable, procSysImportTask)
 
-
+local furnOut = {}
+furnOut["taskType"] = "import"
+furnOut["target"] = "expandedstorage:barrel_160"
+furnOut["specificSlots"] = false
+table.insert(taskTable, furnOut)
 
 
 
