@@ -50,6 +50,8 @@ table.insert(condenseTable, {"techreborn:titanium_nugget", "3x3", "techreborn:ti
 table.insert(condenseTable, {"techreborn:titanium_ingot", "3x3", "techreborn:titanium_storage_block", 64})
 table.insert(condenseTable, {"techreborn:tungsten_nugget", "3x3", "techreborn:tungsten_ingot", 64})
 table.insert(condenseTable, {"techreborn:tungsten_ingot", "3x3", "techreborn:tungsten_storage_block", 64})
+table.insert(condenseTable, {"minecraft:blaze_powder", "3x3", "blockus:blaze_lantern", 64})
+table.insert(condenseTable, {"minecraft:blaze_rod", "3x3", "botania:blaze_block", 64})
 
 return{
 condenseTable = condenseTable
