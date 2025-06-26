@@ -50,8 +50,8 @@ local recipesDir = "recipes/"
 --cycling functionality of the server.
 --Defaults to false.
 local manageBatteries = false
-local emptyBatteries = ""
-local fullBatteries = ""
+local emptyBatteries = "techreborn:storage_unit_58"
+local fullBatteries = "techreborn:storage_unit_59"
 
 --Stores the side of the first modem
 --the computer finds for ease of
