@@ -20,7 +20,7 @@ addRecipe({"minecraft:torch",4},64,{"minecraft:charcoal",nil,nil,n.stick})
 addRecipe({n.bmFrame,1},64,{n.refIron,n.refIron,n.refIron,n.refIron,nil,n.refIron,n.refIron,n.refIron,n.refIron})
 addRecipe({n.treetap,1},16,{nil,n.stick,nil,n.plank,n.plank,n.plank,n.plank})
 --Tech Reborn Machines
-addRecipe({"techreborn:compressor",1},64,{n.stone,nil,n.stone,n.stone,n.bmFrame,n.stone,n.stone,n.eCircuit,n.stone})
+addRecipe({"techreborn:compressor",1},64,{n.stone,nil,n.stone,n.stone,n.eCircuit,n.stone,n.stone,n.bmFrame,n.stone})
 addRecipe({"techreborn:extractor",1},1,{n.treetap,n.bmFrame,n.treetap,n.treetap,n.eCircuit,n.treetap})
 
 --Final Return Statement
