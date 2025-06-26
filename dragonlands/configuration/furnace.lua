@@ -16,7 +16,7 @@ end
 --User-Defined Recipes
 
 --Below is an example recipe.
-addRecipe({"minecraft:brick",1},64,{{"minecraft:clay",1}})
+addRecipe({"minecraft:brick",1},64,{{"minecraft:clay_ball",1}})
 addRecipe({n.stone,1},64,{{n.cobble,1}})
 addRecipe({"minecraft:smooth_stone",1},64,{{n.stone,1}})
 addRecipe({n.refIron,1},64,{{n.iron,1}})
