@@ -15,7 +15,7 @@ config = nil
 
 local gitDir = "dragonlands"
 
-local repo = "https://raw.githubusercontent.com/zenxlii/CC-miscPrograms/"..gitDir.."/configuration/"
+local repo = "https://raw.githubusercontent.com/zenxlii/CC-miscPrograms/refs/heads/main/"..gitDir.."/configuration/"
 
 local function downloadFile(path, url)
 	--print(string.format("Installing %s to %s", repo..url, path))
