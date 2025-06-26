@@ -49,7 +49,7 @@ local recipesDir = "recipes/"
 --Enables or disables the battery
 --cycling functionality of the server.
 --Defaults to false.
-local manageBatteries = false
+local manageBatteries = true
 local emptyBatteries = "techreborn:storage_unit_58"
 local fullBatteries = "techreborn:storage_unit_59"
 
