@@ -17,15 +17,19 @@ addRecipe({n.stick,4},64,{n.plank,nil,nil,n.plank})
 addRecipe({n.plank,4},64,{"minecraft:birch_log"})
 addRecipe({"minecraft:torch",4},64,{"minecraft:charcoal",nil,nil,n.stick})
 addRecipe({n.furnace,1},64,{n.cobble,n.cobble,n.cobble,n.cobble,nil,n.cobble,n.cobble,n.cobble,n.cobble})
+addRecipe({n.piston,1},64,{n.plank,n.plank,n.plank,n.cobble,n.iron,n.cobble,n.cobble,n.rs,n.cobble})
 --Tech Reborn Components
 addRecipe({n.bmFrame,1},64,{n.refIron,n.refIron,n.refIron,n.refIron,nil,n.refIron,n.refIron,n.refIron,n.refIron})
 addRecipe({n.treetap,1},16,{nil,n.stick,nil,n.plank,n.plank,n.plank,n.plank})
 addRecipe({n.cell,4},64,{nil,n.tin,nil,n.tin,nil,n.tin,nil,n.tin})
 --Tech Reborn Machines
 addRecipe({"techreborn:iron_furnace",1},64,{nil,n.iron,nil,n.iron,nil,n.iron,n.iron,n.furnace,n.iron})
+addRecipe({"techreborn:iron_alloy_furnace",1},64,{n.refIron,n.refIron,n.refIron,"techreborn:iron_furnace",nil,"techreborn:iron_furnace",n.refIron,n.refIron,n.refIron})
 addRecipe({"techreborn:electric_furnace",1},64,{nil,n.eCircuit,nil,n.rs,"techreborn:iron_furnace",n.rs})
+addRecipe({"techreborn:alloy_smelter",1},64,{nil,n.eCircuit,nil,"techreborn:electric_furnace","techreborn:iron_alloy_furnace","techreborn:electric_furnace"})
 addRecipe({"techreborn:compressor",1},64,{n.stone,nil,n.stone,n.stone,n.eCircuit,n.stone,n.stone,n.bmFrame,n.stone})
 addRecipe({"techreborn:extractor",1},1,{n.treetap,n.bmFrame,n.treetap,n.treetap,n.eCircuit,n.treetap})
+addRecipe({"techreborn:rolling_machine",1},64,{n.piston,n.aCircuit,n.piston,"techreborn:compressor",n.bmFrame,"techreborn:compressor",n.piston,n.aCircuit,n.piston})
 
 --Final Return Statement
 
