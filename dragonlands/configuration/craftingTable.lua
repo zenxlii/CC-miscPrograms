@@ -43,6 +43,7 @@ addRecipe({"techreborn:extractor",1},1,{n.treetap,n.bmFrame,n.treetap,n.treetap,
 addRecipe({"techreborn:rolling_machine",1},64,{n.piston,n.aCircuit,n.piston,"techreborn:compressor",n.bmFrame,"techreborn:compressor",n.piston,n.aCircuit,n.piston})
 addRecipe({"techreborn:recycler",1},64,{nil,n.eCircuit,nil,n.dirt,"techreborn:compressor",n.dirt,"minecraft:glowstone_dust",n.dirt,"minecraft:glowstone_dust"})
 addRecipe({"techreborn:wire_mill",1},64,{n.brassP,"techreborn:extractor",n.brassP,n.eCircuit,n.bmFrame,n.eCircuit,n.brassP,n.piston,n.brassP})
+addRecipe({"techreborn:solid_canning_machine",1},64,{n.tin,n.eCircuit,n.tin,n.tin,n.bmFrame,n.tin,n.tin,n.tin,n.tin})
 
 --Final Return Statement
 
