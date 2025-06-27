@@ -4,7 +4,7 @@ local core = require("recipeCoreDefs")
 local n = core.sh
 
 local inInvs = {
-"minecraft:barrel_23"
+"minecraft:barrel_22"
 }
 
 local recipeList = {}
