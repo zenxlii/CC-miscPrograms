@@ -22,6 +22,11 @@ furnOut["target"] = "expandedstorage:barrel_160"
 furnOut["specificSlots"] = false
 table.insert(taskTable, furnOut)
 
+local machBlock1Out = {}
+machBlock1Out["taskType"] = "import"
+machBlock1Out["target"] = "minecraft:barrel_22"
+machBlock1Out["specificSlots"] = false
+table.insert(taskTable, machBlock1Out)
 
 
 
