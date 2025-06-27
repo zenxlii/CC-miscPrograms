@@ -9,8 +9,8 @@ local inInvs = {
 
 local recipeList = {}
 --Relevant Recipe Function Wrapper
-local function addRecipe(productTable, batchLim, ingredientsTable, byproductsTable)
-	local eName, recipeData = core.makeExternalRecipe(productTable, batchLim, ingredientsTable, "furnace", inInvs, byproductsTable)
+local function addRecipe(productTable, batchLim, ingredientsTable)
+	local eName, recipeData = core.makeExternalRecipe(productTable, batchLim, ingredientsTable, "furnace", inInvs)
 	recipeList[eName] = recipeData
 end
 --User-Defined Recipes

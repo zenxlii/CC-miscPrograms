@@ -34,6 +34,7 @@ fs.delete(commonCodeDisk.."/configFiles/config.lua")
 fs.delete("configFiles/config.lua")
 fs.delete("recipes/craftingTable.lua")
 fs.delete("recipes/furnace.lua")
+fs.delete("recipes/compressor.lua")
 fs.delete("configFiles/storageList.lua")
 
 --And download the new ones.
@@ -44,6 +45,7 @@ downloadFile(commonCodeDisk.."/configFiles/config.lua", "config.lua")
 downloadFile("configFiles/config.lua", "config.lua")
 downloadFile("recipes/craftingTable.lua", "craftingTable.lua")
 downloadFile("recipes/furnace.lua", "furnace.lua")
+downloadFile("recipes/compressor.lua", "compressor.lua")
 downloadFile("configFiles/storageList.lua", "storageList.lua")
 
 print("Config replacement is done!")
