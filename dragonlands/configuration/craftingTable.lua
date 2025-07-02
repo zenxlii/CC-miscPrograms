@@ -46,7 +46,7 @@ addRecipe({"techreborn:wire_mill",1},64,{n.brassP,"techreborn:extractor",n.brass
 addRecipe({"techreborn:solid_canning_machine",1},64,{n.tin,n.eCircuit,n.tin,n.tin,n.bmFrame,n.tin,n.tin,n.tin,n.tin})
 --Tech Reborn Multiblocks
 addRecipe({"techreborn:basic_machine_casing",4},64,{n.aluminiumP,n.aluminiumP,n.aluminiumP,n.eCircuit,n.bmFrame,n.eCircuit,n.aluminiumP,n.aluminiumP,n.aluminiumP})
-addRecipe({"techreborn:advanced_machine_casing",4},64,{})
+addRecipe({"techreborn:advanced_machine_casing",4},64,{n.steelP,n.steelP,n.steelP,n.aCircuit,n.amFrame,n.aCircuit,n.steelP,n.steelP,n.steelP})
 
 --Final Return Statement
 
