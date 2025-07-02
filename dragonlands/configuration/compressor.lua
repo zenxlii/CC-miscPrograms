@@ -21,6 +21,7 @@ addRecipe({n.goldP,1},64,{{n.gold,1}})
 addRecipe({n.copperP,1},64,{{n.copper,1}})
 addRecipe({n.tinP,1},64,{{n.tin,1}})
 addRecipe({n.brassP,1},64,{{n.brass,1}})
+addRecipe({n.refIronP,1},64,{{n.refIron,1}})
 
 --Final Return Statement
 
