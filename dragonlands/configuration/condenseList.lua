@@ -56,6 +56,7 @@ table.insert(condenseTable, {"betterend:thallasium_ingot", "3x3", "betterend:tha
 table.insert(condenseTable, {"minecraft:charcoal", "3x3", "betterend:charcoal_block", 64})
 table.insert(condenseTable, {"minecraft:gunpowder", "3x3", "charm:gunpowder_block", 64})
 table.insert(condenseTable, {"minecraft:quartz", "2x2", "minecraft:quartz_block", 64})
+table.insert(condenseTable, {"minecraft:glowstone_dust", "2x2", "minecraft:glowstone", 64})
 
 return{
 condenseTable = condenseTable
