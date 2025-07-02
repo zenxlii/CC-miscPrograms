@@ -7,7 +7,8 @@ local wp = {}
 
 --Configurables
 local machineTypes = {
-"techreborn:compressor"
+"techreborn:compressor",
+"techreborn:wire_mill"
 }
 local emptyBatteryENames = {}
 emptyBatteryENames["techreborn:red_cell_battery"] = true
@@ -22,6 +23,7 @@ local maxBattOut = 1
 local outputInv = "minecraft:barrel_28"
 local inputInvs = {}
 inputInvs["techreborn:compressor"] = {"minecraft:barrel_29"}
+inputInvs["techreborn:wire_mill"] = {"minecraft:barrel_31"}
 
 
 --Helper Functions
@@ -30,15 +32,6 @@ local function batchedParallel(funcs)
 	for cnt = 1, #funcs, batchSize do
         local batchEnd = cnt + batchSize - 1
         local highLim = math.min(batchEnd, #funcs)
-		--[[
-		for key, value in pairs(funcs) do
-			print(key)
-			for key, value in pairs(value) do
-				print(key)
-				print(value)
-			end
-		end
-		]]
         parallel.waitForAll(table.unpack(funcs, cnt, highLim))
     end
 end
@@ -76,6 +69,7 @@ end
 local preMachineLists = {}
 local machineLists = {}
 for _, mType in ipairs(machineTypes) do
+	print("Machine type "..mType.." found!")
 	preMachineLists[mType] = {peripheral.find(mType)}
 	machineLists[mType] = {}
 	machineLists[mType]["input"] = inputInvs[mType]
@@ -366,7 +360,7 @@ local function main()
 		batMan(itemMoveTable)
 		batchedParallel(itemMoveTable)
 		scanReturns = {}
-		os.sleep(5)
+		os.sleep(1)
 	end
 end
 
