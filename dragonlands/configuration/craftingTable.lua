@@ -47,6 +47,7 @@ addRecipe({"techreborn:solid_canning_machine",1},64,{n.tin,n.eCircuit,n.tin,n.ti
 --Tech Reborn Multiblocks
 addRecipe({"techreborn:basic_machine_casing",4},64,{n.aluminiumP,n.aluminiumP,n.aluminiumP,n.eCircuit,n.bmFrame,n.eCircuit,n.aluminiumP,n.aluminiumP,n.aluminiumP})
 addRecipe({"techreborn:advanced_machine_casing",4},64,{n.steelP,n.steelP,n.steelP,n.aCircuit,n.amFrame,n.aCircuit,n.steelP,n.steelP,n.steelP})
+addRecipe({"techreborn:industrial_machine_casing",4},64,{n.chromeP,n.chromeP,n.chromeP,n.dsCore,n.imFrame,n.dsCore,n.chromeP,n.chromeP,n.chromeP})
 
 --Final Return Statement
 
