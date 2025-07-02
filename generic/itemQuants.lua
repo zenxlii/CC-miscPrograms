@@ -1,5 +1,8 @@
 local itemQuants = {}
 
+--Single Item Only Recipes
+itemQuants["techreborn:wire_mill"] = {}
+
 --Single Ingredient Recipes
 --Formatted as follows:
 --[machineName][ingredientName] = amount

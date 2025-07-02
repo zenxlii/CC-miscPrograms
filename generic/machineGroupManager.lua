@@ -146,7 +146,7 @@ end
 
 local function updateLockStatus()
 	for _, mList in pairs(machineLists) do
-		local inSlots = sm.slotMaps[mList.type]
+		local inSlots = sm.slotMaps[mList.type].input
 		for _, mach in ipairs(mList) do
 			local isClear = true
 			local scanData = scanReturns[mach.name]
@@ -213,6 +213,7 @@ end
 --already checked for if there's enough
 --stuff to make this work.
 local function insertInput(eName, amount, source, target, targetSlot, inManifest, inputData, fTable)
+	
 	local amountLeft = amount
 	local breaker = false
 	for sourceSlot, iData in pairs(inputData) do
@@ -241,6 +242,11 @@ local function insertInput(eName, amount, source, target, targetSlot, inManifest
 		end
 	end
 	inManifest[eName] = inManifest[eName] - amount
+	if amountLeft == amount then
+		return false
+	else
+		return true
+	end
 end
 
 --Handles item insertion for machines
@@ -267,15 +273,22 @@ local function insertBasic(mList, fTable, mClass)
 		if mach.lock then
 			--TODO:
 			--Finish this section.
-			local eName = nameEncode(scanReturns[mach.name][inSlot].name, scanReturns[mach.name][inSlot].nbt)
+			if scanReturns[mach.name][inSlot] then
+				local eName = nameEncode(scanReturns[mach.name][inSlot].name, scanReturns[mach.name][inSlot].nbt)
+			end
 		else
 			for eName, amount in pairs(inManifest) do
+				local movedAnything = false
 				if itemQ[eName] then
-					if itemQ[eName] < amount then
-						insertInput(eName, itemQ[eName], mList.input[1], mach.name, inSlot, inManifest, inputData, fTable)
+					if itemQ[eName] <= amount then
+						movedAnything = insertInput(eName, itemQ[eName], mList.input[1], mach.name, inSlot, inManifest, inputData, fTable)
+						mach.lock = true
+						break
 					end
 				else
-					insertInput(eName, 1, mList.input[1], mach.name, inSlot, inManifest, inputData, fTable)
+					movedAnything = insertInput(eName, 1, mList.input[1], mach.name, inSlot, inManifest, inputData, fTable)
+					mach.lock = true
+					break
 				end
 			end
 		end
