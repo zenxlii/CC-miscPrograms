@@ -44,6 +44,9 @@ addRecipe({"techreborn:rolling_machine",1},64,{n.piston,n.aCircuit,n.piston,"tec
 addRecipe({"techreborn:recycler",1},64,{nil,n.eCircuit,nil,n.dirt,"techreborn:compressor",n.dirt,"minecraft:glowstone_dust",n.dirt,"minecraft:glowstone_dust"})
 addRecipe({"techreborn:wire_mill",1},64,{n.brassP,"techreborn:extractor",n.brassP,n.eCircuit,n.bmFrame,n.eCircuit,n.brassP,n.piston,n.brassP})
 addRecipe({"techreborn:solid_canning_machine",1},64,{n.tin,n.eCircuit,n.tin,n.tin,n.bmFrame,n.tin,n.tin,n.tin,n.tin})
+--Tech Reborn Multiblocks
+addRecipe({"techreborn:basic_machine_casing",4},64,{n.aluminiumP,n.aluminiumP,n.aluminiumP,n.eCircuit,n.bmFrame,n.eCircuit,n.aluminiumP,n.aluminiumP,n.aluminiumP})
+addRecipe({"techreborn:advanced_machine_casing",4},64,{})
 
 --Final Return Statement
 

@@ -20,8 +20,11 @@ addRecipe({n.ironP,1},64,{{n.iron,1}})
 addRecipe({n.goldP,1},64,{{n.gold,1}})
 addRecipe({n.copperP,1},64,{{n.copper,1}})
 addRecipe({n.tinP,1},64,{{n.tin,1}})
+addRecipe({n.aluminiumPlate,1},64,{{n.aluminium,1}})
 addRecipe({n.brassP,1},64,{{n.brass,1}})
 addRecipe({n.refIronP,1},64,{{n.refIron,1}})
+addRecipe({n.aAlloyP,1},64,{{n.aAlloy,1}})
+addRecipe({n.steelP,1},64,{{n.steel,1}})
 
 --Final Return Statement
 

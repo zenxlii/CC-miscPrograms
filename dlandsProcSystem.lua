@@ -77,6 +77,9 @@ local mowl = {}
 mowl["minecraft:coal_ore"] = "wig"
 mowl["minecraft:deepslate_coal_ore"] = "wig"
 mowl["deeperdarker:sculk_stone_coal_ore"] = "wig"
+mowl["minecraft:copper_ore"] = "wig"
+mowl["minecraft:deepslate_copper_ore"] = "wig"
+mowl["deeperdarker:sculk_stone_copper_ore"] = "wig"
 mowl["minecraft:iron_ore"] = "wig"
 mowl["minecraft:deepslate_iron_ore"] = "wig"
 mowl["deeperdarker:sculk_stone_iron_ore"] = "wig"
@@ -109,6 +112,7 @@ mowl["create:deepslate_zinc_ore"] = "ccr"
 mowl["techreborn:raw_lead"] = "ccr"
 
 --3x3 Compaction
+--[[
 mowl["minecraft:iron_nugget"] = "3x3"
 mowl["minecraft:gold_nugget"] = "3x3"
 mowl["techreborn:nickel_nugget"] = "3x3"
@@ -117,6 +121,7 @@ mowl["techreborn:copper_nugget"] = "3x3"
 mowl["techreborn:zinc_nugget"] = "3x3"
 mowl["create:copper_nugget"] = "3x3"
 mowl["create:zinc_nugget"] = "3x3"
+]]
 
 --2x2 Compaction
 mowl["techreborn:glowstone_small_dust"] = "2x2"
