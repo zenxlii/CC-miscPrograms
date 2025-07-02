@@ -3,6 +3,7 @@ local itemQuants = {}
 --Single Item Only Recipes
 itemQuants["techreborn:wire_mill"] = {} 
 itemQuants["techreborn:extractor"] = {}
+itemQuants["techreborn:grinder"] = {}
 
 --Single Ingredient Recipes
 --Formatted as follows:
