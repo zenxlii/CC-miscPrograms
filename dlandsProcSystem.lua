@@ -171,6 +171,7 @@ addInv(genImports, "minecraft:barrel_15", table27)
 addInv(genImports, "minecraft:barrel_12", table27)
 addInv(genImports, "minecraft:barrel_14", table27)
 addInv(genImports, "minecraft:barrel_18", table27)
+addInv(genImports, "minecraft:barrel_20", table27)
 
 local c3x3 = "minecraft:barrel_2"
 table.insert(scanFuncList, function()
