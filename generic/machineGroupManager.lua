@@ -8,7 +8,8 @@ local wp = {}
 --Configurables
 local machineTypes = {
 "techreborn:compressor",
-"techreborn:wire_mill"
+"techreborn:wire_mill",
+"techreborn:extractor"
 }
 local emptyBatteryENames = {}
 emptyBatteryENames["techreborn:red_cell_battery"] = true
@@ -24,6 +25,7 @@ local outputInv = "minecraft:barrel_28"
 local inputInvs = {}
 inputInvs["techreborn:compressor"] = {"minecraft:barrel_29"}
 inputInvs["techreborn:wire_mill"] = {"minecraft:barrel_31"}
+inputInvs["techreborn:extractor"] = {"minecraft:barrel_33"}
 
 
 --Helper Functions
