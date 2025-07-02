@@ -9,11 +9,19 @@ local wp = {}
 local machineTypes = {
 "techreborn:compressor"
 }
+local emptyBatteryENames = {}
+emptyBatteryENames["techreborn:red_cell_battery"] = true
+emptyBatteryENames["techreborn:lithium_ion_battery"] = true
+emptyBatteryENames["techreborn:energy_crystal"] = true
+emptyBatteryENames["techreborn:lapotron_crystal"] = true
+emptyBatteryENames["techreborn:lapotronic_orb"] = true
 local batteryIn = "expandedstorage:mini_chest_4"
-local batteryOut = ""
-local outputInv = "minecraft:barrel_27"
+local maxBattIn = 1
+local batteryOut = "techreborn:storage_unit_62"
+local maxBattOut = 1
+local outputInv = "minecraft:barrel_28"
 local inputInvs = {}
-inputInvs["techreborn:compressor"] = {"techreborn:storage_unit_63"}
+inputInvs["techreborn:compressor"] = {"minecraft:barrel_29"}
 
 
 --Helper Functions
@@ -22,6 +30,15 @@ local function batchedParallel(funcs)
 	for cnt = 1, #funcs, batchSize do
         local batchEnd = cnt + batchSize - 1
         local highLim = math.min(batchEnd, #funcs)
+		--[[
+		for key, value in pairs(funcs) do
+			print(key)
+			for key, value in pairs(value) do
+				print(key)
+				print(value)
+			end
+		end
+		]]
         parallel.waitForAll(table.unpack(funcs, cnt, highLim))
     end
 end
@@ -56,16 +73,24 @@ end
 
 --Makes a table for every machine of
 --a type specified in machineTypes.
+local preMachineLists = {}
 local machineLists = {}
 for _, mType in ipairs(machineTypes) do
-	machineLists[mType] = peripheral.find(mType)
+	preMachineLists[mType] = {peripheral.find(mType)}
+	machineLists[mType] = {}
 	machineLists[mType]["input"] = inputInvs[mType]
 	machineLists[mType]["type"] = sm.machMaps[mType]
-	for cnt, wrap in ipairs(mType) do
-		machineLists[mType][cnt] = {"name" = wrap.getName(), "lock" = false}
-		wp[machineLists[mType][cnt]["name"]] = machineLists[mType][cnt]["name"].wrap()
+	local cntr = 1
+	for _, wrap in pairs(preMachineLists[mType]) do
+		machineLists[mType][cntr] = {}
+		machineLists[mType][cntr].name = peripheral.getName(wrap)
+		machineLists[mType][cntr].lock = false
+		wp[machineLists[mType][cntr]["name"]] = peripheral.wrap(machineLists[mType][cntr]["name"])
+		cntr = cntr + 1
 	end
 end
+
+preMachineLists = nil
 
 wp[batteryIn] = peripheral.wrap(batteryIn)
 wp[batteryOut] = peripheral.wrap(batteryOut)
@@ -111,11 +136,17 @@ end
 
 --Scanning Functions
 local function scan(wrapInv)
-	scanReturns[wrapInv.getName()] = wrapInv.list()
+	scanReturns[peripheral.getName(wrapInv)] = wrapInv.list()
 end
 
 local function runScans()
-	batchedParallel(scanTargets)
+	local scansToMake = {}
+	for _, peripheral in pairs(scanTargets) do
+		table.insert(scansToMake, function() 
+			scan(peripheral)
+		end)
+	end
+	batchedParallel(scansToMake)
 	--resetScanTargets()
 end
 
@@ -145,6 +176,7 @@ end
 --the output inventory.
 local function extractOutputs(fTable)
 	local extractsLeft = outputSize
+	print(scanReturns[outputInv])
 	for _, itemData in pairs(scanReturns[outputInv]) do
 		extractsLeft = extractsLeft - 1
 	end
@@ -157,7 +189,7 @@ local function extractOutputs(fTable)
 			local mName = mach.name
 			local scanData = scanReturns[mach.name]
 			for _, slotNum in pairs(outSlots) do
-				if not scanData[slotNum] then
+				if scanData[slotNum] then
 					table.insert(fTable, function() 
 						wp[mName].pushItems(outputInv, slotNum)
 					end)
@@ -181,11 +213,48 @@ local function subtractItems(mName, amount)
 	
 end
 
+--Function which handles the insertion
+--of items from an input inventory into
+--a machine.
+--Assumes that the calling function has
+--already checked for if there's enough
+--stuff to make this work.
+local function insertInput(eName, amount, source, target, targetSlot, inManifest, inputData, fTable)
+	local amountLeft = amount
+	local breaker = false
+	for sourceSlot, iData in pairs(inputData) do
+		local iName = nameEncode(iData.name, iData.nbt)
+		if iName == eName then
+			local quant = iData.count
+			if quant >= amountLeft then
+				table.insert(fTable, function()
+					wp[source].pushItems(target, sourceSlot, amountLeft, targetSlot)
+				end)
+				inputData[sourceSlot].count = inputData[sourceSlot].count - amountLeft
+				breaker = true
+			elseif quant > 0 then
+				table.insert(fTable, function()
+					wp[source].pushItems(target, sourceSlot, quant, targetSlot)
+				end)
+				inputData[sourceSlot].count = 0
+				amountLeft = amountLeft - quant
+			end
+			if inputData[sourceSlot].count == 0 then
+				inputData[sourceSlot] = nil
+			end
+		end
+		if breaker then
+			break
+		end
+	end
+	inManifest[eName] = inManifest[eName] - amount
+end
+
 --Handles item insertion for machines
 --with only one standard input slot.
 local function insertBasic(mList, fTable, mClass)
-	local inputData = scanReturns[mList["input"]]
-	if inputData = {} then
+	local inputData = scanReturns[mList.input]
+	if inputData == {} then
 		return
 	end
 	local inSlot = sm.slotMaps[mList.type][1]
@@ -200,14 +269,22 @@ local function insertBasic(mList, fTable, mClass)
 			inManifest[eName] = iData.count
 		end
 	end
-	local itemQ = iq.itemQuants.mClass
+	local itemQ = iq.itemQuants[mClass]
 	for _, mach in ipairs(mList) do
 		if mach.lock then
 			--TODO:
 			--Finish this section.
 			local eName = nameEncode(scanReturns[mach.name][inSlot].name, scanReturns[mach.name][inSlot].nbt)
 		else
-			for 
+			for eName, amount in pairs(inManifest) do
+				if itemQ[eName] then
+					if itemQ[eName] < amount then
+						insertInput(eName, itemQ[eName], mList.input, mach.name, inSlot, inManifest, inputData, fTable)
+					end
+				else
+					insertInput(eName, 1, mList.input, mach.name, inSlot, inManifest, inputData, fTable)
+				end
+			end
 		end
 	end
 end
@@ -217,7 +294,8 @@ end
 
 
 
---
+--Determines which insertion function
+--to use for a given machine type.
 local function masterInsertHandler(fTable)
 	for mClass, mList in pairs(machineLists) do
 		local mType = mList.type
@@ -229,6 +307,47 @@ local function masterInsertHandler(fTable)
 			
 		else
 			error(mType.."/n is not a valid slot layout type!")
+		end
+	end
+end
+
+--Battery manager which handles both
+--the extraction of empty batteries and
+--the insertion of fresh ones.
+local function batMan(fTable)
+	local battInState = scanReturns[batteryIn]
+	local battInCount = 0
+	local battOutState = scanReturns[batteryOut]
+	local battOutCount = 0
+	local breaker = false
+	for mClass, mList in pairs(machineLists) do
+		local batterySlot = sm.slotMaps[sm.machMaps["mClass"]].battery
+		if batterySlot then
+			for _, mach in ipairs(mList) do
+				local battSlotData = scanReturns[mach.name][batterySlot]
+				if maxBattIn ~= battInCount and not battSlotData then
+					table.insert(fTable, function()
+						wp[batteryIn].pushItems(mach.name, 1, 1, batterySlot)
+					end)
+					battInState[1] = nil
+					battInCount = battInCount + 1
+				elseif maxBattOut ~= battOutCount and battSlotData then
+					local battName = nameEncode(battSlotData.name, battSlotData.nbt)
+					if emptyBatteryENames[battName] then
+						table.insert(fTable, function()
+							wp[batteryOut].pullItems(mach.name, batterySlot, 1, 1)
+						end)
+						battOutState[1] = true
+						battOutCount = battOutCount + 1
+					end
+				elseif maxBattIn == battInCount and maxBattOut == battOutCount then
+					breaker = true
+					break
+				end
+			end
+		end
+		if breaker then
+			break
 		end
 	end
 end
@@ -248,3 +367,5 @@ local function main()
 		os.sleep(5)
 	end
 end
+
+main()
