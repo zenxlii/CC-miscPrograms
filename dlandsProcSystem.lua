@@ -99,6 +99,8 @@ mowl["techreborn:sapphire_ore"] = "wig"
 mowl["techreborn:deepslate_sapphire_ore"] = "wig"
 mowl["techreborn:lead_ore"] = "wig"
 mowl["techreborn:deepslate_lead_ore"] = "wig"
+mowl["techreborn:silver_ore"] = "wig"
+mowl["techreborn:deepslate_silver_ore"] = "wig"
 --Mercury Grinders
 
 --Sodium Persulphate Grinders
