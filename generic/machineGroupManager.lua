@@ -260,7 +260,7 @@ local function insertBasic(mList, fTable, mClass)
 	if inputData == {} then
 		return
 	end
-	local inSlot = sm.slotMaps[mList.type][1]
+	local inSlot = sm.slotMaps[mList.type].input[1]
 	--Make a manifest of everything in
 	--the input inventory.
 	local inManifest = {}
@@ -299,7 +299,55 @@ local function insertBasic(mList, fTable, mClass)
 	end
 end
 
-
+--Handles item insertion for machines
+--with multiple, separate slots.
+local function insertMultiSlot(mList, fTable, mClass)
+	local inputData = {}
+	local hasAnyInputs = false
+	for cnt, inv in pairs(mList.input) do
+		inputData[cnt] = scanReturns[inv]
+		if inputData[cnt] ~= {} then
+			hasAnyInputs = true
+		end
+	end
+	if hasAnyInputs == false then
+		return
+	end
+	local inSlots = {}
+	for cnt, slot in pairs(sm.slotMaps[mList.type].input) do
+		table.insert(inSlots, slot)
+	end
+	--Make a manifest of everything in
+	--the input inventories, but keep
+	--each inventory's manifest
+	--separate.
+	local inManifests = {}
+	for cnt, inv in pairs(inputData) do
+		inManifests[cnt] = {}
+		for _, iData in pairs(inv) do
+			local eName = nameEncode(iData.name, iData.nbt)
+			if inManifests[cnt][eName] then
+				inManifests[cnt][eName] = inManifests[cnt][eName] + iData.count
+			else
+				inManifests[cnt][eName] = iData.count
+			end
+		end
+	end
+	local itemQ = iq.itemQuants[mClass]
+	for _, mach in ipairs(mList) do
+		if mach.lock then
+			--TODO:
+			--Finish this section.
+			if scanReturns[mach.name][inSlot] then
+				local eName = nameEncode(scanReturns[mach.name][inSlot].name, scanReturns[mach.name][inSlot].nbt)
+			end
+		else
+			for cnt, data in ipairs(itemQ) do
+			
+			end
+		end
+	end
+end
 
 
 
