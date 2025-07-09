@@ -10,7 +10,8 @@ local machineTypes = {
 "techreborn:compressor",
 "techreborn:wire_mill",
 "techreborn:extractor",
-"techreborn:grinder"
+"techreborn:grinder",
+"techreborn:alloy_smelter"
 }
 local emptyBatteryENames = {}
 emptyBatteryENames["techreborn:red_cell_battery"] = true
@@ -28,6 +29,7 @@ inputInvs["techreborn:compressor"] = {"minecraft:barrel_29"}
 inputInvs["techreborn:wire_mill"] = {"minecraft:barrel_31"}
 inputInvs["techreborn:extractor"] = {"minecraft:barrel_33"}
 inputInvs["techreborn:grinder"] = {"minecraft:barrel_35"}
+inputInvs["techreborn:alloy_smelter"] = {"minecraft:barrel_38", "minecraft:barrel_39"}
 
 
 --Helper Functions
@@ -338,12 +340,31 @@ local function insertMultiSlot(mList, fTable, mClass)
 		if mach.lock then
 			--TODO:
 			--Finish this section.
-			if scanReturns[mach.name][inSlot] then
-				local eName = nameEncode(scanReturns[mach.name][inSlot].name, scanReturns[mach.name][inSlot].nbt)
-			end
+			
 		else
 			for cnt, data in ipairs(itemQ) do
-			
+				local isPossible = true
+				for count, manifest in pairs(inManifests) do
+					if manifest[data[count].eName] then
+						if manifest[data[count].eName] >= data[count].amount then
+							
+						else
+							isPossible = false
+							break
+						end
+					else
+						isPossible = false
+						break
+					end
+				end
+				if isPossible == true then
+					for count, manifest in pairs(inManifests) do
+						local eName = data[count].eName
+						insertInput(eName, data[count].amount, mList.input[count], mach.name, inSlots[count], manifest, inputData[count], fTable)
+					end
+					mach.lock = true
+					break
+				end
 			end
 		end
 	end
@@ -360,7 +381,7 @@ local function masterInsertHandler(fTable)
 		if mType == "basic" or mType == "cell4Out" then
 			insertBasic(mList, fTable, mClass)
 		elseif mType == "basic2In" then
-			
+			insertMultiSlot(mList, fTable, mClass)
 		elseif mType == "rolling" then
 			
 		else
