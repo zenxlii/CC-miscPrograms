@@ -345,8 +345,8 @@ local function insertMultiSlot(mList, fTable, mClass)
 			for cnt, data in ipairs(itemQ) do
 				local isPossible = true
 				for count, manifest in pairs(inManifests) do
-					if manifest[data[count].eName] then
-						if manifest[data[count].eName] >= data[count].amount then
+					if manifest[data[count][1]] then
+						if manifest[data[count][1]] >= data[count][2] then
 							
 						else
 							isPossible = false
@@ -359,8 +359,7 @@ local function insertMultiSlot(mList, fTable, mClass)
 				end
 				if isPossible == true then
 					for count, manifest in pairs(inManifests) do
-						local eName = data[count].eName
-						insertInput(eName, data[count].amount, mList.input[count], mach.name, inSlots[count], manifest, inputData[count], fTable)
+						insertInput(data[count][1], data[count][2], mList.input[count], mach.name, inSlots[count], manifest, inputData[count], fTable)
 					end
 					mach.lock = true
 					break
