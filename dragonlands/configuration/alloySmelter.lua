@@ -17,7 +17,7 @@ end
 --User-Defined Recipes
 
 --Below is an example recipe.
-addRecipe({n.brass,4},64,{{"minecraft:copper_ingot",3},{n.zinc,1}})
+addRecipe({n.brass,4},64,{{n.copper,3},{n.zinc,1}})
 
 --Final Return Statement
 
