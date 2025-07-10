@@ -31,6 +31,11 @@ addRecipe({"computercraft:computer_advanced",1},64,{n.gold,n.gold,n.gold,n.gold,
 --Bigger Chests/Barrels
 addRecipe({"expandedstorage:copper_barrel",1},64,{n.copper,n.copper,n.copper,n.copper,n.barrel,n.copper,n.copper,n.copper,n.copper})
 addRecipe({"expandedstorage:iron_barrel",1},64,{n.ironN,n.ironN,n.ironN,n.iron,"expandedstorage:copper_barrel",n.iron,n.ironN,n.ironN,n.ironN})
+--Create Components
+
+
+addRecipe({"create:metal_girder",8},64,{n.ironP,n.ironP,n.ironP,n.andAlloy,n.andAlloy,n.andAlloy})
+addRecipe({"create:metal_girder",4},64,{n.ironN,n.ironN,n.ironN,n.iron,n.andAlloy,n.iron})
 --Tech Reborn Components
 addRecipe({n.bmFrame,1},64,{n.refIron,n.refIron,n.refIron,n.refIron,nil,n.refIron,n.refIron,n.refIron,n.refIron})
 addRecipe({n.amFrame,1},64,{nil,"techreborn:carbon_plate",nil,n.aAlloyP,n.bmFrame,n.aAlloyP,nil,"techreborn:carbon_plate"})
