@@ -144,6 +144,7 @@ mowl["minecraft:raw_copper_block"] = "1x1"
 --Industrial Blast Furnaces
 mowl["techreborn:galena_dust"] = "ibf"
 mowl["techreborn:aluminum_dust"] = "ibf"
+mowl["techreborn:cell#c710b4dd5e1644e960c4f1a12c0147f9"] = "ibf"
 
 --Bulk Washing
 mowl["create:crushed_raw_iron"] = "bwa"
