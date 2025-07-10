@@ -14,7 +14,7 @@ end
 --Generic Components
 addRecipe({"minecraft:redstone_torch",1},64,{n.rs,nil,nil,n.stick})
 addRecipe({n.stick,4},64,{n.plank,nil,nil,n.plank})
-addRecipe({n.plank,4},64,{"minecraft:birch_log"})
+--addRecipe({n.plank,4},64,{"minecraft:birch_log"})
 addRecipe({"minecraft:torch",4},64,{"minecraft:charcoal",nil,nil,n.stick})
 addRecipe({n.furnace,1},64,{n.cobble,n.cobble,n.cobble,n.cobble,nil,n.cobble,n.cobble,n.cobble,n.cobble})
 addRecipe({n.piston,1},64,{n.plank,n.plank,n.plank,n.cobble,n.iron,n.cobble,n.cobble,n.rs,n.cobble})
