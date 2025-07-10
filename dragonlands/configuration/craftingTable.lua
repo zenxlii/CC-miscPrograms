@@ -60,7 +60,7 @@ addRecipe({"techreborn:industrial_blast_furnace",1},64,{n.aCircuit,"techreborn:c
 addRecipe({"techreborn:industrial_sawmill",1},64,{n.refIron,n.aCircuit,n.refIron,"techreborn:diamond_saw_blade","techreborn:diamond_saw_blade","techreborn:diamond_saw_blade",n.aCircuit,n.amFrame,n.aCircuit})
 --Tech Reborn Storage Blocks
 addRecipe({"techreborn:crude_storage_unit",1},64,{n.plank,n.plank,n.plank,n.plank,n.barrel,n.plank,n.plank,n.paper,n.plank})
-addRecipe({"techreborn:basic_storage_unit",1},64,{n.refIronP,n.refIronP,n.refIronP,"techreborn:crude_storage_unit",n.bmFrame,"techreborn:crude_storage_unit",n.eCircuit,n.bDisplay,n.eCircuit})
+addRecipe({"techreborn:basic_storage_unit",1},64,{n.refIronP,n.refIronP,n.refIronP,"techreborn:crude_storage_unit",n.bmFrame,"techreborn:crude_storage_unit",n.eCircuit,"techreborn:basic_display",n.eCircuit})
 
 --Final Return Statement
 
