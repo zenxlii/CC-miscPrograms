@@ -25,6 +25,7 @@ end
 
 --Below is an example recipe.
 addRecipe({n.bucket,2},64,{{n.iron,1},nil,{n.iron,1},{n.iron,1},nil,{n.iron,1},nil,{n.iron,1}})
+addRecipe({"techreborn:cupronickel_heating_coil",3},64,{{n.nickel,1},{n.copper,1},{n.nickel,1},{n.copper,1},nil,{n.copper,1},{n.nickel,1},{n.copper,1},{n.nickel,1}})
 
 --Final Return Statement
 
