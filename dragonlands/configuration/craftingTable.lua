@@ -63,6 +63,8 @@ addRecipe({"techreborn:industrial_sawmill",1},64,{n.refIron,n.aCircuit,n.refIron
 addRecipe({"techreborn:crude_storage_unit",1},64,{n.plank,n.plank,n.plank,n.plank,n.barrel,n.plank,n.plank,n.paper,n.plank})
 addRecipe({"techreborn:basic_storage_unit",1},64,{n.refIronP,n.refIronP,n.refIronP,"techreborn:crude_storage_unit",n.bmFrame,"techreborn:crude_storage_unit",n.eCircuit,"techreborn:basic_display",n.eCircuit})
 
+addRecipe({"techreborn:basic_tank_unit",1},16,{nil,n.cell,nil,n.rubber,"techreborn:basic_storage_unit",n.rubber,nil,n.cell})
+
 --Final Return Statement
 
 return{
