@@ -28,6 +28,9 @@ addRecipe({"charm:birch_chest",1},64,{n.plank,n.plank,n.plank,n.plank,nil,n.plan
 addRecipe({"computercraft:cable",6},64,{nil,n.stone,nil,n.stone,n.rs,n.stone,nil,n.stone})
 addRecipe({"computercraft:wired_modem",1},64,{n.stone,n.stone,n.stone,n.stone,n.rs,n.stone,n.stone,n.stone,n.stone})
 addRecipe({"computercraft:computer_advanced",1},64,{n.gold,n.gold,n.gold,n.gold,n.rs,n.gold,n.gold,n.glassP,n.gold})
+--Bigger Chests/Barrels
+addRecipe({"expandedstorage:copper_barrel",1},64,{n.copper,n.copper,n.copper,n.copper,n.barrel,n.copper,n.copper,n.copper,n.copper})
+addRecipe({"expandedstorage:iron_barrel",1},64,{n.ironN,n.ironN,n.ironN,n.iron,"expandedstorage:copper_barrel",n.iron,n.ironN,n.ironN,n.ironN})
 --Tech Reborn Components
 addRecipe({n.bmFrame,1},64,{n.refIron,n.refIron,n.refIron,n.refIron,nil,n.refIron,n.refIron,n.refIron,n.refIron})
 addRecipe({n.amFrame,1},64,{nil,"techreborn:carbon_plate",nil,n.aAlloyP,n.bmFrame,n.aAlloyP,nil,"techreborn:carbon_plate"})
