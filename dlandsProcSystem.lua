@@ -116,16 +116,8 @@ mowl["techreborn:raw_silver"] = "ccr"
 mowl["minecraft:nether_quartz_ore"] = "ccr"
 
 --3x3 Compaction
---[[
-mowl["minecraft:iron_nugget"] = "3x3"
-mowl["minecraft:gold_nugget"] = "3x3"
-mowl["techreborn:nickel_nugget"] = "3x3"
-mowl["techreborn:tin_nugget"] = "3x3"
 mowl["techreborn:copper_nugget"] = "3x3"
 mowl["techreborn:zinc_nugget"] = "3x3"
-mowl["create:copper_nugget"] = "3x3"
-mowl["create:zinc_nugget"] = "3x3"
-]]
 
 --2x2 Compaction
 mowl["techreborn:glowstone_small_dust"] = "2x2"
