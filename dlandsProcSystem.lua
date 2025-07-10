@@ -133,6 +133,7 @@ mowl["techreborn:ruby_small_dust"] = "2x2"
 mowl["techreborn:sapphire_small_dust"] = "2x2"
 mowl["techreborn:red_garnet_small_dust"] = "2x2"
 mowl["techreborn:peridot_small_dust"] = "2x2"
+mowl["techreborn:galena_small_dust"] = "2x2"
 
 --1x1 Crafting
 mowl["minecraft:raw_iron_block"] = "1x1"
