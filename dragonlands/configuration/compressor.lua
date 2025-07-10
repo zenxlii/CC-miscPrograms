@@ -27,6 +27,7 @@ addRecipe({n.brassP,1},64,{{n.brass,1}})
 addRecipe({n.refIronP,1},64,{{n.refIron,1}})
 addRecipe({n.aAlloyP,1},64,{{n.aAlloy,1}})
 addRecipe({n.steelP,1},64,{{n.steel,1}})
+addRecipe({"techreborn:carbon_plate",1},64,{{"techreborn:carbon_mesh",1}})
 
 --Final Return Statement
 
