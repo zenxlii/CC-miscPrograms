@@ -363,7 +363,9 @@ local function insertMultiSlot(mList, fTable, mClass)
 				end
 				if isPossible == true then
 					for count, manifest in pairs(inManifests) do
-						insertInput(data[count][1], data[count][2], mList.input[count], mach.name, inSlots[count], manifest, inputData[count], fTable)
+						if data[count] ~= nil then
+							insertInput(data[count][1], data[count][2], mList.input[count], mach.name, inSlots[count], manifest, inputData[count], fTable)
+						end
 					end
 					mach.lock = true
 					break
