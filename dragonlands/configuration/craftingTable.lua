@@ -41,6 +41,7 @@ addRecipe({"create:metal_girder",8},64,{n.ironP,n.ironP,n.ironP,n.andAlloy,n.and
 addRecipe({"create:metal_bracket",4},64,{n.ironN,n.ironN,n.ironN,n.iron,n.andAlloy,n.iron})
 --Create Machines
 addRecipe({"create:deployer",1},64,{n.eTube,nil,nil,n.aCasing,nil,nil,"create:brass_hand"})
+addRecipe({"create:mechanical_saw",1},64,{nil,n.ironP,nil,n.ironP,n.iron,n.ironP,nil,n.aCasing})
 --Tech Reborn Components
 addRecipe({n.bmFrame,1},64,{n.refIron,n.refIron,n.refIron,n.refIron,nil,n.refIron,n.refIron,n.refIron,n.refIron})
 addRecipe({n.amFrame,1},64,{nil,"techreborn:carbon_plate",nil,n.aAlloyP,n.bmFrame,n.aAlloyP,nil,"techreborn:carbon_plate"})
