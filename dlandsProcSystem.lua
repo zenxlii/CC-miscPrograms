@@ -116,6 +116,7 @@ mowl["create:deepslate_zinc_ore"] = "ccr"
 mowl["techreborn:raw_lead"] = "ccr"
 mowl["techreborn:raw_silver"] = "ccr"
 mowl["minecraft:nether_quartz_ore"] = "ccr"
+mowl["techreborn:raw_tin"] = "ccr"
 
 --3x3 Compaction
 mowl["techreborn:copper_nugget"] = "3x3"
@@ -153,6 +154,7 @@ mowl["techreborn:zinc_dust"] = "smt"
 mowl["techreborn:nickel_dust"] = "smt"
 mowl["create:crushed_raw_lead"] = "smt"
 mowl["create:crushed_raw_silver"] = "smt"
+mowl["create:crushed_raw_tin"] = "smt"
 
 --One-Offs
 mowl["create:experience_nugget"] = "den"
