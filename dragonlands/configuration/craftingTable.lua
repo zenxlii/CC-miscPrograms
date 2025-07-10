@@ -14,7 +14,6 @@ end
 --Generic Components
 addRecipe({"minecraft:redstone_torch",1},64,{n.rs,nil,nil,n.stick})
 addRecipe({n.stick,4},64,{n.plank,nil,nil,n.plank})
---addRecipe({n.plank,4},64,{"minecraft:birch_log"})
 addRecipe({"minecraft:torch",4},64,{"minecraft:charcoal",nil,nil,n.stick})
 addRecipe({n.furnace,1},64,{n.cobble,n.cobble,n.cobble,n.cobble,nil,n.cobble,n.cobble,n.cobble,n.cobble})
 addRecipe({n.piston,1},64,{n.plank,n.plank,n.plank,n.cobble,n.iron,n.cobble,n.cobble,n.rs,n.cobble})
@@ -24,6 +23,7 @@ addRecipe({n.barrel,1},64,{"charm:birch_barrel"})
 addRecipe({"charm:birch_barrel",1},64,{n.plank,n.plankS,n.plank,n.plank,nil,n.plank,n.plank,n.plankS,n.plank})
 addRecipe({n.chest,1},64,{"charm:birch_chest"})
 addRecipe({"charm:birch_chest",1},64,{n.plank,n.plank,n.plank,n.plank,nil,n.plank,n.plank,n.plank,n.plank})
+addRecipe({"minecraft:compass",1},64,{nil,n.iron,nil,n.iron,n.rs,n.iron,nil,n.iron})
 --ComputerCraft Stuff
 addRecipe({"computercraft:cable",6},64,{nil,n.stone,nil,n.stone,n.rs,n.stone,nil,n.stone})
 addRecipe({"computercraft:wired_modem",1},64,{n.stone,n.stone,n.stone,n.stone,n.rs,n.stone,n.stone,n.stone,n.stone})
