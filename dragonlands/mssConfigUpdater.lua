@@ -40,6 +40,7 @@ fs.delete("recipes/extractor.lua")
 fs.delete("recipes/grinder.lua")
 fs.delete("recipes/alloySmelter.lua")
 fs.delete("recipes/rollingMachine.lua")
+fs.delete("recipes/mixerNoHeat.lua")
 fs.delete("configFiles/storageList.lua")
 
 --And download the new ones.
@@ -56,6 +57,7 @@ downloadFile("recipes/extractor.lua", "extractor.lua")
 downloadFile("recipes/grinder.lua", "grinder.lua")
 downloadFile("recipes/alloySmelter.lua", "alloySmelter.lua")
 downloadFile("recipes/rollingMachine.lua", "rollingMachine.lua")
+downloadFile("recipes/mixerNoHeat.lua", "mixerNoHeat.lua")
 downloadFile("configFiles/storageList.lua", "storageList.lua")
 
 print("Config replacement is done!")
