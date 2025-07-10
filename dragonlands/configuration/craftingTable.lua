@@ -31,9 +31,13 @@ addRecipe({"computercraft:computer_advanced",1},64,{n.gold,n.gold,n.gold,n.gold,
 --Bigger Chests/Barrels
 addRecipe({"expandedstorage:copper_barrel",1},64,{n.copper,n.copper,n.copper,n.copper,n.barrel,n.copper,n.copper,n.copper,n.copper})
 addRecipe({"expandedstorage:iron_barrel",1},64,{n.ironN,n.ironN,n.ironN,n.iron,"expandedstorage:copper_barrel",n.iron,n.ironN,n.ironN,n.ironN})
---Create Components
+--Create Transmission
 addRecipe({n.cog,1},64,{n.shaft,n.plank})
 addRecipe({n.bigCog,1},64,{n.cog,n.plank})
+addRecipe({n.belt,1},64,{n.dKelp,n.dKelp,n.dKelp,n.dKelp,n.dKelp,n.dKelp})
+addRecipe({"create:gearbox",1},64,{nil,n.cog,nil,n.cog,n.aCasing,n.cog,nil,n.cog})
+addRecipe({"create:vertical_gearbox",1},64,{"create:gearbox"})
+--Create Components
 addRecipe({"create:brass_hand",1},64,{nil,n.andAlloy,nil,n.brassP,n.brassP,n.brassP,nil,n.brassP})
 addRecipe({n.eTube,1},64,{"create:polished_rose_quartz",nil,nil,n.ironP})
 
