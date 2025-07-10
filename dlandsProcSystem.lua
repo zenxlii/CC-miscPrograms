@@ -113,6 +113,7 @@ mowl["create:zinc_ore"] = "ccr"
 mowl["create:deepslate_zinc_ore"] = "ccr"
 mowl["techreborn:raw_lead"] = "ccr"
 mowl["techreborn:raw_silver"] = "ccr"
+mowl["minecraft:nether_quartz_ore"] = "ccr"
 
 --3x3 Compaction
 --[[
