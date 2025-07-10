@@ -50,6 +50,8 @@ addRecipe({"techreborn:basic_machine_casing",4},64,{n.aluminiumP,n.aluminiumP,n.
 addRecipe({"techreborn:advanced_machine_casing",4},64,{n.steelP,n.steelP,n.steelP,n.aCircuit,n.amFrame,n.aCircuit,n.steelP,n.steelP,n.steelP})
 addRecipe({"techreborn:industrial_machine_casing",4},64,{n.chromeP,n.chromeP,n.chromeP,n.dsCore,n.imFrame,n.dsCore,n.chromeP,n.chromeP,n.chromeP})
 addRecipe({"techreborn:industrial_blast_furnace",1},64,{n.aCircuit,"techreborn:cupronickel_heating_coil",n.aCircuit,"techreborn:cupronickel_heating_coil",n.amFrame,"techreborn:cupronickel_heating_coil","techreborn:electric_furnace","techreborn:cupronickel_heating_coil","techreborn:electric_furnace"})
+--Tech Reborn Storage Blocks
+addRecipe({"techreborn:crude_storage_unit",1},64,{n.plank,n.plank,n.plank,n.plank,n.barrel,n.plank,n.plank,n.paper,n.plank})
 
 --Final Return Statement
 

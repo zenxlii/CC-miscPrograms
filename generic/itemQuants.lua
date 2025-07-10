@@ -46,6 +46,14 @@ itemQuants["techreborn:alloy_smelter"][5][2] = {"create:zinc_ingot", 1}
 
 
 
+--Rolling Machine
+
+
+
+
+
+
+
 
 
 
