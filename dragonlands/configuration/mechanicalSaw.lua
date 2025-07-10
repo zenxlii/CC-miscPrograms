@@ -18,6 +18,7 @@ end
 --Below is an example recipe.
 addRecipe({"minecraft:stripped_birch_log",1},64,{{"minecraft:birch_log",1}})
 addRecipe({n.plank,6},64,{{"minecraft:stripped_birch_log",1}})
+addRecipe({n.shaft,6},64,{{n.andAlloy,1}})
 
 --Final Return Statement
 
