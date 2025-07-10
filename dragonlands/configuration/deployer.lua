@@ -18,6 +18,8 @@ end
 
 --Below is an example recipe.
 addRecipe({n.aCasing,1},64,{{n.andAlloy,1},{"minecraft:stripped_birch_log",1}})
+addRecipe({n.bCasing,1},64,{{n.brass,1},{"minecraft:stripped_birch_log",1}})
+addRecipe({n.cCasing,1},64,{{n.copper,1},{"minecraft:stripped_birch_log",1}})
 
 --Final Return Statement
 
