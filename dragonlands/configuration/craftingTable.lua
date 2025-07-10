@@ -34,9 +34,13 @@ addRecipe({"expandedstorage:iron_barrel",1},64,{n.ironN,n.ironN,n.ironN,n.iron,"
 --Create Components
 addRecipe({n.cog,1},64,{n.shaft,n.plank})
 addRecipe({n.bigCog,1},64,{n.cog,n.plank})
+addRecipe({"create:brass_hand",1},64,{nil,n.andAlloy,nil,n.brassP,n.brassP,n.brassP,nil,n.brassP})
+addRecipe({n.eTube,1},64,{"create:polished_rose_quartz",nil,nil,n.ironP})
 
 addRecipe({"create:metal_girder",8},64,{n.ironP,n.ironP,n.ironP,n.andAlloy,n.andAlloy,n.andAlloy})
 addRecipe({"create:metal_bracket",4},64,{n.ironN,n.ironN,n.ironN,n.iron,n.andAlloy,n.iron})
+--Create Machines
+
 --Tech Reborn Components
 addRecipe({n.bmFrame,1},64,{n.refIron,n.refIron,n.refIron,n.refIron,nil,n.refIron,n.refIron,n.refIron,n.refIron})
 addRecipe({n.amFrame,1},64,{nil,"techreborn:carbon_plate",nil,n.aAlloyP,n.bmFrame,n.aAlloyP,nil,"techreborn:carbon_plate"})
