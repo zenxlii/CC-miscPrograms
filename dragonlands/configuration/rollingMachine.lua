@@ -28,6 +28,7 @@ addRecipe({n.bucket,2},64,{{n.iron,1},nil,{n.iron,1},{n.iron,1},nil,{n.iron,1},n
 addRecipe({"techreborn:cupronickel_heating_coil",3},64,{{n.nickel,1},{n.copper,1},{n.nickel,1},{n.copper,1},nil,{n.copper,1},{n.nickel,1},{n.copper,1},{n.nickel,1}})
 addRecipe({n.ironBars,24},64,{{n.iron,1},{n.iron,1},{n.iron,1},{n.iron,1},{n.iron,1},{n.iron,1}})
 addRecipe({"techreborn:nichrome_heating_coil",2},64,{nil,{n.nickel,1},nil,{n.nickel,1},{n.chrome,1},{n.nickel,1},nil,{n.nickel,1}})
+addRecipe({"techreborn:magnalium_plate",3},64,{{n.aluminium,1},{n.aluminium,1},{n.aluminium,1},{"techreborn:magnesium_dust",1},{"techreborn:magnesium_dust",1},{"techreborn:magnesium_dust",1},{n.aluminium,1},{n.aluminium,1},{n.aluminium,1}})
 
 --Final Return Statement
 

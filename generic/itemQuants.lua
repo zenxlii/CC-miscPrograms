@@ -89,7 +89,16 @@ itemQuants["techreborn:rolling_machine"][7][4] = {"techreborn:nickel_ingot",1}
 itemQuants["techreborn:rolling_machine"][7][5] = {"techreborn:chrome_ingot",1}
 itemQuants["techreborn:rolling_machine"][7][6] = {"techreborn:nickel_ingot",1}
 itemQuants["techreborn:rolling_machine"][7][8] = {"techreborn:nickel_ingot",1}
-
+itemQuants["techreborn:rolling_machine"][8] = {}
+itemQuants["techreborn:rolling_machine"][8][1] = {"techreborn:aluminum_ingot",1}
+itemQuants["techreborn:rolling_machine"][8][2] = {"techreborn:aluminum_ingot",1}
+itemQuants["techreborn:rolling_machine"][8][3] = {"techreborn:aluminum_ingot",1}
+itemQuants["techreborn:rolling_machine"][8][4] = {"techreborn:magnesium_dust",1}
+itemQuants["techreborn:rolling_machine"][8][5] = {"techreborn:magnesium_dust",1}
+itemQuants["techreborn:rolling_machine"][8][6] = {"techreborn:magnesium_dust",1}
+itemQuants["techreborn:rolling_machine"][8][7] = {"techreborn:aluminum_ingot",1}
+itemQuants["techreborn:rolling_machine"][8][8] = {"techreborn:aluminum_ingot",1}
+itemQuants["techreborn:rolling_machine"][8][9] = {"techreborn:aluminum_ingot",1}
 
 
 
