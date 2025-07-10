@@ -83,7 +83,12 @@ itemQuants["techreborn:rolling_machine"][6][6] = {"minecraft:copper_ingot",1}
 itemQuants["techreborn:rolling_machine"][6][7] = {"techreborn:nickel_ingot",1}
 itemQuants["techreborn:rolling_machine"][6][8] = {"minecraft:copper_ingot",1}
 itemQuants["techreborn:rolling_machine"][6][9] = {"techreborn:nickel_ingot",1}
-
+itemQuants["techreborn:rolling_machine"][7] = {}
+itemQuants["techreborn:rolling_machine"][7][2] = {"techreborn:nickel_ingot",1}
+itemQuants["techreborn:rolling_machine"][7][4] = {"techreborn:nickel_ingot",1}
+itemQuants["techreborn:rolling_machine"][7][5] = {"techreborn:chrome_ingot",1}
+itemQuants["techreborn:rolling_machine"][7][6] = {"techreborn:nickel_ingot",1}
+itemQuants["techreborn:rolling_machine"][7][8] = {"techreborn:nickel_ingot",1}
 
 
 
