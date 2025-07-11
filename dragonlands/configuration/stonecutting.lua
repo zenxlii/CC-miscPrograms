@@ -37,6 +37,14 @@ local rootNames = {
 "veridium"
 }
 
+local createVariantPrefixes = {
+"cut_"
+}
+
+local createVariantSuffixes = {
+""
+}
+
 local recipeList = {}
 --Relevant Recipe Function Wrapper
 local function addRecipe(productTable, batchLim, ingredientsTable, inventories)
@@ -51,10 +59,19 @@ local function makeRecipeBatch(productPrefix, productList, productSuffix, inputP
 		addRecipe({pName,productAmount},64,{{iName,1}},{inputInventory})
 	end
 end
+
+local function makeRecipeBatchBatch(productList, inputList, prefixList, suffixList, ending, productAmount, inputInventory)
+	for cnt, prefix in ipairs(prefixList) do
+		local suffix = suffixList[cnt]..ending
+		makeRecipeBatch(prefix, productList, suffix, prefix, inputList, suffix, productAmount, inputInventory)
+	end
+end
 --User-Defined Recipes
 
 --Below is an example recipe.
 makeRecipeBatch("create:cut_",rootNames,"","",rawStones,"",1,"minecraft:chest_3")
+makeRecipeBatchBatch(rootNames,rootNames,createVariantPrefixes,createVariantSuffixes,"_wall","minecraft:barrel_74")
+
 
 --Final Return Statement
 
