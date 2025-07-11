@@ -60,17 +60,22 @@ local function makeRecipeBatch(productPrefix, productList, productSuffix, inputP
 	end
 end
 
+--TODO:
+--Fix this function.
 local function makeRecipeBatchBatch(productList, inputList, prefixList, suffixList, ending, productAmount, inputInventory)
 	for cnt, prefix in ipairs(prefixList) do
 		local suffix = suffixList[cnt]..ending
 		makeRecipeBatch(prefix, productList, suffix, prefix, inputList, suffix, productAmount, inputInventory)
 	end
 end
+
 --User-Defined Recipes
 
 --Below is an example recipe.
 makeRecipeBatch("create:cut_",rootNames,"","",rawStones,"",1,"minecraft:chest_3")
-makeRecipeBatchBatch(rootNames,rootNames,createVariantPrefixes,createVariantSuffixes,"_wall",1,"minecraft:barrel_74")
+makeRecipeBatch("create:cut_",rootNames,"_wall","create:cut_",rootNames,"",1,"minecraft:barrel_74")
+makeRecipeBatch("create:cut_",rootNames,"_stairs","create:cut_",rootNames,"",1,"minecraft:barrel_73")
+makeRecipeBatch("create:cut_",rootNames,"_slab","create:cut_",rootNames,"",2,"minecraft:barrel_72")
 
 --Final Return Statement
 
