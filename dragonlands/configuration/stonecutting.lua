@@ -70,8 +70,7 @@ end
 
 --Below is an example recipe.
 makeRecipeBatch("create:cut_",rootNames,"","",rawStones,"",1,"minecraft:chest_3")
-makeRecipeBatchBatch(rootNames,rootNames,createVariantPrefixes,createVariantSuffixes,"_wall","minecraft:barrel_74")
-
+makeRecipeBatchBatch(rootNames,rootNames,createVariantPrefixes,createVariantSuffixes,"_wall",1,"minecraft:barrel_74")
 
 --Final Return Statement
 
