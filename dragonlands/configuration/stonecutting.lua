@@ -43,10 +43,18 @@ local function addRecipe(productTable, batchLim, ingredientsTable, inventories)
 	local eName, recipeData = core.makeExternalRecipe(productTable, batchLim, ingredientsTable, "stonecutting", inventories)
 	recipeList[eName] = recipeData
 end
+
+local function makeRecipeBatch(productPrefix, productList, productSuffix, inputPrefix, inputList, inputSuffix, productAmount, inputInventory)
+	for cnt, prodNameMid in ipairs(productList) do
+		local pName = productPrefix..prodNameMid..productSuffix
+		local iName = inputPrefix..inputList[cnt]..inputSuffix
+		addRecipe({pName,productAmount},64,{{iName,1}},{inputInventory})
+	end
+end
 --User-Defined Recipes
 
 --Below is an example recipe.
-
+makeRecipeBatch("create:cut_",rootNames,"","",rawStones,"",1,"minecraft:chest_3")
 
 --Final Return Statement
 
