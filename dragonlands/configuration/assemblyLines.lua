@@ -12,7 +12,7 @@ end
 --User-Defined Recipes
 
 --Below is an example recipe.
-addRecipe({"railways:track_monorail",6},1,{{"create:metal_bracket",1},{n.ironP,1},{"create:metal_girder",1}},{"techreborn:storage_unit_64","techreborn:storage_unit_65","techreborn:storage_unit_66"})
+addRecipe({"railways:track_monorail",6},1,{{"create:metal_bracket",1},{n.ironP,1},{"create:metal_girder",1}},{"minecraft:barrel_67","minecraft:barrel_68","minecraft:barrel_69"})
 
 --Final Return Statement
 
