@@ -42,7 +42,7 @@ table.insert(taskTable, machBlock3Out)
 
 local machBlock4Out = {}
 machBlock4Out["taskType"] = "import"
-machBlock4Out["target"] = "minecraft:barrel_70"
+machBlock4Out["target"] = "minecraft:barrel_71"
 machBlock4Out["specificSlots"] = false
 table.insert(taskTable, machBlock4Out)
 
