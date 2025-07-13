@@ -25,6 +25,7 @@ addRecipe({n.chest,1},64,{"charm:birch_chest"})
 addRecipe({"charm:birch_chest",1},64,{n.plank,n.plank,n.plank,n.plank,nil,n.plank,n.plank,n.plank,n.plank})
 addRecipe({"minecraft:compass",1},64,{nil,n.iron,nil,n.iron,n.rs,n.iron,nil,n.iron})
 addRecipe({"minecraft:lever",1},64,{n.stick,nil,nil,n.cobble})
+addRecipe({"minecraft:hopper",1},64,{n.iron,nil,n.iron,n.iron,n.chest,n.iron,nil,n.iron})
 --ComputerCraft Stuff
 addRecipe({"computercraft:cable",6},64,{nil,n.stone,nil,n.stone,n.rs,n.stone,nil,n.stone})
 addRecipe({"computercraft:wired_modem",1},64,{n.stone,n.stone,n.stone,n.stone,n.rs,n.stone,n.stone,n.stone,n.stone})
@@ -63,6 +64,7 @@ addRecipe({"techreborn:mixed_metal_ingot",5},64,{n.invar,n.invar,n.invar,n.brass
 --Tech Reborn Machines
 addRecipe({"techreborn:iron_furnace",1},64,{nil,n.iron,nil,n.iron,nil,n.iron,n.iron,n.furnace,n.iron})
 addRecipe({"techreborn:iron_alloy_furnace",1},64,{n.refIron,n.refIron,n.refIron,"techreborn:iron_furnace",nil,"techreborn:iron_furnace",n.refIron,n.refIron,n.refIron})
+addRecipe({"techreborn:drain",1},16,{n.refIronP,n.ironBars,n.refIronP,n.refIronP,"minecraft:hopper",n.refIronP,n.refIronP,n.bucket,n.refIronP})
 addRecipe({"techreborn:electric_furnace",1},64,{nil,n.eCircuit,nil,n.rs,"techreborn:iron_furnace",n.rs})
 addRecipe({"techreborn:alloy_smelter",1},64,{nil,n.eCircuit,nil,"techreborn:electric_furnace","techreborn:iron_alloy_furnace","techreborn:electric_furnace"})
 addRecipe({"techreborn:grinder",1},64,{n.flint,n.flint,n.flint,n.cobble,n.bmFrame,n.cobble,nil,n.eCircuit})
