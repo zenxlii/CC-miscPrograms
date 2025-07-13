@@ -50,6 +50,7 @@ addRecipe({"create:deployer",1},64,{n.eTube,nil,nil,n.aCasing,nil,nil,"create:br
 addRecipe({"create:mechanical_saw",1},64,{nil,n.ironP,nil,n.ironP,n.iron,n.ironP,nil,n.aCasing})
 addRecipe({"create:mechanical_press",1},64,{n.shaft,nil,nil,n.aCasing,nil,nil,"minecraft:iron_block"})
 --Create Trains
+addRecipe({"create:schedule",4},64,{"techreborn:obsidian_plate",n.paper})
 addRecipe({"create:track_signal",4},64,{n.tCasing,n.eTube})
 addRecipe({"create:track_station",2},64,{n.tCasing,"minecraft:compass"})
 addRecipe({"create:controls",1},64,{"minecraft:lever",nil,nil,n.tCasing,nil,nil,"create:precision_mechanism"})
