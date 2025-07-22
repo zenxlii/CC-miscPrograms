@@ -12,6 +12,7 @@ local machineTypes = {
 "techreborn:extractor",
 "techreborn:grinder",
 "techreborn:alloy_smelter",
+"techreborn:chemical_reactor",
 "techreborn:rolling_machine"
 }
 local emptyBatteryENames = {}
@@ -31,8 +32,8 @@ inputInvs["techreborn:wire_mill"] = {"minecraft:barrel_31"}
 inputInvs["techreborn:extractor"] = {"minecraft:barrel_33"}
 inputInvs["techreborn:grinder"] = {"minecraft:barrel_35"}
 inputInvs["techreborn:alloy_smelter"] = {"minecraft:barrel_38", "minecraft:barrel_39"}
+inputInvs["techreborn:chemical_reactor"] = {"minecraft:barrel_77", "minecraft:barrel_78"}
 inputInvs["techreborn:rolling_machine"] = {"minecraft:barrel_49", "minecraft:barrel_50", "minecraft:barrel_51", "minecraft:barrel_52", "minecraft:barrel_53", "minecraft:barrel_54", "minecraft:barrel_55", "minecraft:barrel_56", "minecraft:barrel_57"}
-
 
 --Helper Functions
 local batchSize = 250
