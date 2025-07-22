@@ -60,6 +60,7 @@ addRecipe({n.amFrame,1},64,{nil,"techreborn:carbon_plate",nil,n.aAlloyP,n.bmFram
 addRecipe({n.treetap,1},16,{nil,n.stick,nil,n.plank,n.plank,n.plank,n.plank})
 addRecipe({n.cell,4},64,{nil,n.tin,nil,n.tin,nil,n.tin,nil,n.tin})
 addRecipe({"techreborn:basic_display",1},64,{n.refIronP,n.blackDye,n.refIronP,n.blackDye,n.eCircuit,n.blackDye,n.refIronP,n.glassP,n.refIronP})
+addRecipe({"techreborn:digital_display",1},64,{n.aluminiumP, n.blackDye,n.aluminiumP,n.blackDye,n.glassP,n.blackDye,n.aluminiumP,n.aCircuit,n.aluminiumP})
 addRecipe({"techreborn:carbon_mesh",1},64,{"techreborn:carbon_fiber","techreborn:carbon_fiber"})
 addRecipe({"techreborn:mixed_metal_ingot",5},64,{n.invar,n.invar,n.invar,n.brass,n.brass,n.brass,n.aluminium,n.aluminium,n.aluminium})
 --Tech Reborn Machines
@@ -87,8 +88,13 @@ addRecipe({"techreborn:industrial_sawmill",1},64,{n.refIron,n.aCircuit,n.refIron
 --Tech Reborn Storage Blocks
 addRecipe({"techreborn:crude_storage_unit",1},64,{n.plank,n.plank,n.plank,n.plank,n.barrel,n.plank,n.plank,n.paper,n.plank})
 addRecipe({"techreborn:basic_storage_unit",1},64,{n.refIronP,n.refIronP,n.refIronP,"techreborn:crude_storage_unit",n.bmFrame,"techreborn:crude_storage_unit",n.eCircuit,"techreborn:basic_display",n.eCircuit})
+addRecipe({"techreborn:advanced_storage_unit",1},64,{n.electrumP,n.electrumP,n.electrumP,"techreborn:basic_storage_unit",n.amFrame,"techreborn:basic_storage_unit",n.aCircuit,"techreborn:digital_display",n.aCircuit})
 
 addRecipe({"techreborn:basic_tank_unit",1},16,{nil,n.cell,nil,n.rubber,"techreborn:basic_storage_unit",n.rubber,nil,n.cell})
+addRecipe({"techreborn:advanced_tank_unit",1},16,{nil,n.cell,nil,n.rubber,"techreborn:advanced_storage_unit",n.rubber,nil,n.cell})
+
+addRecipe({"techreborn:crude_unit_upgrader",1},64,{n.refIronP,n.refIronP,n.refIronP,"techreborn:crude_storage_unit",n.bmFrame,nil,n.eCircuit,"techreborn:basic_display",n.eCircuit})
+addRecipe({"techreborn:basic_storage_unit",1},64,{n.electrumP,n.electrumP,n.electrumP,"techreborn:basic_storage_unit",n.amFrame,nil,n.aCircuit,"techreborn:digital_display",n.aCircuit})
 
 --Final Return Statement
 
