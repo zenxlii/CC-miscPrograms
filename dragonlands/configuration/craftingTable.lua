@@ -26,6 +26,7 @@ addRecipe({"charm:birch_chest",1},64,{n.plank,n.plank,n.plank,n.plank,nil,n.plan
 addRecipe({"minecraft:compass",1},64,{nil,n.iron,nil,n.iron,n.rs,n.iron,nil,n.iron})
 addRecipe({"minecraft:lever",1},64,{n.stick,nil,nil,n.cobble})
 addRecipe({"minecraft:hopper",1},64,{n.iron,nil,n.iron,n.iron,n.chest,n.iron,nil,n.iron})
+addRecipe({"minecraft:bricks",1},64,{"minecraft:brick","minecraft:brick",nil,"minecraft:brick","minecraft:brick"})
 --ComputerCraft Stuff
 addRecipe({"computercraft:cable",6},64,{nil,n.stone,nil,n.stone,n.rs,n.stone,nil,n.stone})
 addRecipe({"computercraft:wired_modem",1},64,{n.stone,n.stone,n.stone,n.stone,n.rs,n.stone,n.stone,n.stone,n.stone})
