@@ -94,7 +94,7 @@ addRecipe({"techreborn:basic_tank_unit",1},16,{nil,n.cell,nil,n.rubber,"techrebo
 addRecipe({"techreborn:advanced_tank_unit",1},16,{nil,n.cell,nil,n.rubber,"techreborn:advanced_storage_unit",n.rubber,nil,n.cell})
 
 addRecipe({"techreborn:crude_unit_upgrader",1},64,{n.refIronP,n.refIronP,n.refIronP,"techreborn:crude_storage_unit",n.bmFrame,nil,n.eCircuit,"techreborn:basic_display",n.eCircuit})
-addRecipe({"techreborn:basic_storage_unit",1},64,{n.electrumP,n.electrumP,n.electrumP,"techreborn:basic_storage_unit",n.amFrame,nil,n.aCircuit,"techreborn:digital_display",n.aCircuit})
+addRecipe({"techreborn:basic_unit_upgrader",1},64,{n.electrumP,n.electrumP,n.electrumP,"techreborn:basic_storage_unit",n.amFrame,nil,n.aCircuit,"techreborn:digital_display",n.aCircuit})
 
 --Final Return Statement
 
