@@ -19,7 +19,7 @@ addRecipe({n.furnace,1},64,{n.cobble,n.cobble,n.cobble,n.cobble,nil,n.cobble,n.c
 addRecipe({n.piston,1},64,{n.plank,n.plank,n.plank,n.cobble,n.iron,n.cobble,n.cobble,n.rs,n.cobble})
 addRecipe({n.glassP,16},64,{n.glass,n.glass,n.glass,n.glass,n.glass,n.glass})
 addRecipe({n.plankS,6},64,{n.plank,n.plank,n.plank})
-addRecipe({n.cTable,1{,64,{n.plank,n.plank,nil,n.plank,n.plank})
+addRecipe({n.cTable,1},64,{n.plank,n.plank,nil,n.plank,n.plank})
 addRecipe({n.barrel,1},64,{"charm:birch_barrel"})
 addRecipe({"charm:birch_barrel",1},64,{n.plank,n.plankS,n.plank,n.plank,nil,n.plank,n.plank,n.plankS,n.plank})
 addRecipe({n.chest,1},64,{"charm:birch_chest"})
