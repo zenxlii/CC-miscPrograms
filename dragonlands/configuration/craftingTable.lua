@@ -42,6 +42,7 @@ addRecipe({"create:gearbox",1},64,{nil,n.cog,nil,n.cog,n.aCasing,n.cog,nil,n.cog
 addRecipe({"create:vertical_gearbox",1},64,{"create:gearbox"})
 
 addRecipe({"create:water_wheel",1},64,{n.plank,n.plank,n.plank,n.plank,n.shaft,n.plank,n.plank,n.plank,n.plank})
+addRecipe({"create:large_water_wheel",1},64,{n.plank,n.plank,n.plank,"create:water_wheel",n.shaft,n.plank,n.plank,n.plank,n.plank})
 --Create Components
 addRecipe({"create:brass_hand",1},64,{nil,n.andAlloy,nil,n.brassP,n.brassP,n.brassP,nil,n.brassP})
 addRecipe({n.eTube,1},64,{"create:polished_rose_quartz",nil,nil,n.ironP})
