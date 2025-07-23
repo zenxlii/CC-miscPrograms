@@ -67,6 +67,7 @@ addRecipe({"techreborn:basic_display",1},64,{n.refIronP,n.blackDye,n.refIronP,n.
 addRecipe({"techreborn:digital_display",1},64,{n.aluminiumP, n.blackDye,n.aluminiumP,n.blackDye,n.glassP,n.blackDye,n.aluminiumP,n.aCircuit,n.aluminiumP})
 addRecipe({"techreborn:carbon_mesh",1},64,{"techreborn:carbon_fiber","techreborn:carbon_fiber"})
 addRecipe({"techreborn:mixed_metal_ingot",5},64,{n.invar,n.invar,n.invar,n.brass,n.brass,n.brass,n.aluminium,n.aluminium,n.aluminium})
+addRecipe({"techreborn:red_cell_battery",1},16,{nil,n.copperIC,nil,n.lead,n.rs,n.lead,n.lead,n.rs,n.lead})
 --Tech Reborn Machines
 addRecipe({"techreborn:iron_furnace",1},64,{nil,n.iron,nil,n.iron,nil,n.iron,n.iron,n.furnace,n.iron})
 addRecipe({"techreborn:iron_alloy_furnace",1},64,{n.refIron,n.refIron,n.refIron,"techreborn:iron_furnace",nil,"techreborn:iron_furnace",n.refIron,n.refIron,n.refIron})
