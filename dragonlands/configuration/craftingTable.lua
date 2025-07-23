@@ -19,6 +19,7 @@ addRecipe({n.furnace,1},64,{n.cobble,n.cobble,n.cobble,n.cobble,nil,n.cobble,n.c
 addRecipe({n.piston,1},64,{n.plank,n.plank,n.plank,n.cobble,n.iron,n.cobble,n.cobble,n.rs,n.cobble})
 addRecipe({n.glassP,16},64,{n.glass,n.glass,n.glass,n.glass,n.glass,n.glass})
 addRecipe({n.plankS,6},64,{n.plank,n.plank,n.plank})
+addRecipe({n.cTable,1{,64,{n.plank,n.plank,nil,n.plank,n.plank})
 addRecipe({n.barrel,1},64,{"charm:birch_barrel"})
 addRecipe({"charm:birch_barrel",1},64,{n.plank,n.plankS,n.plank,n.plank,nil,n.plank,n.plank,n.plankS,n.plank})
 addRecipe({n.chest,1},64,{"charm:birch_chest"})
@@ -56,6 +57,8 @@ addRecipe({"create:metal_bracket",4},64,{n.ironN,n.ironN,n.ironN,n.iron,n.andAll
 addRecipe({"create:deployer",1},64,{n.eTube,nil,nil,n.aCasing,nil,nil,"create:brass_hand"})
 addRecipe({"create:mechanical_saw",1},64,{nil,n.ironP,nil,n.ironP,n.iron,n.ironP,nil,n.aCasing})
 addRecipe({"create:mechanical_press",1},64,{n.shaft,nil,nil,n.aCasing,nil,nil,"minecraft:iron_block"})
+
+addRecipe({"create:mechanical_crafter",3},64,{n.eTube,nil,nil,n.bCasing,nil,nil,n.cTable})
 --Create Trains
 addRecipe({"create:schedule",4},64,{"techreborn:obsidian_plate",n.paper})
 addRecipe({"create:track_signal",4},64,{n.tCasing,n.eTube})
