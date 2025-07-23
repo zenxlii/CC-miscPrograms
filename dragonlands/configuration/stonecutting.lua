@@ -38,10 +38,12 @@ local rootNames = {
 }
 
 local createVariantPrefixes = {
-"cut_"
+"cut_",
+"polished_cut_"
 }
 
 local createVariantSuffixes = {
+"",
 ""
 }
 
@@ -76,6 +78,10 @@ makeRecipeBatch("create:cut_",rootNames,"","",rawStones,"",1,"minecraft:chest_3"
 makeRecipeBatch("create:cut_",rootNames,"_wall","create:cut_",rootNames,"",1,"minecraft:barrel_74")
 makeRecipeBatch("create:cut_",rootNames,"_stairs","create:cut_",rootNames,"",1,"minecraft:barrel_73")
 makeRecipeBatch("create:cut_",rootNames,"_slab","create:cut_",rootNames,"",2,"minecraft:barrel_72")
+makeRecipeBatch("create:polished_cut_",rootNames,"","",rawStones,"",1,"minecraft:barrel_79")
+makeRecipeBatch("create:polished_cut_",rootNames,"_wall","create:polished_cut_",rootNames,"",1,"minecraft:barrel_74")
+makeRecipeBatch("create:polished_cut_",rootNames,"_stairs","create:polished_cut_",rootNames,"",1,"minecraft:barrel_73")
+makeRecipeBatch("create:polished_cut_",rootNames,"_slab","create:polished_cut_",rootNames,"",2,"minecraft:barrel_72")
 
 --Final Return Statement
 
