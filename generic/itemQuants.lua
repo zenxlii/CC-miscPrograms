@@ -42,7 +42,7 @@ itemQuants["techreborn:alloy_smelter"][5][2] = {"create:zinc_ingot", 1}
 itemQuants["techreborn:chemical_reactor"] = {}
 itemQuants["techreborn:chemical_reactor"][1] = {}
 itemQuants["techreborn:chemical_reactor"][1][1] = {"minecraft:blaze_powder",1}
-itemQuants["techreborn:chemical_reactor"][1][1] = {"minecraft:ender_pearl",1}
+itemQuants["techreborn:chemical_reactor"][1][2] = {"minecraft:ender_pearl",1}
 
 
 
