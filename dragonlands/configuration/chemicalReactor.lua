@@ -18,6 +18,7 @@ end
 
 --Below is an example recipe.
 addRecipe({"minecraft:ender_eye",2},64,{{"minecraft:blaze_powder",1},{"minecraft:ender_pearl",1}})
+addRecipe({"techreborn:synthetic_redstone_crystal",1},64,{{n.rs,32},{n.diamond,1}})
 
 --Final Return Statement
 

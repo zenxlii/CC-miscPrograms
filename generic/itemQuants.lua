@@ -43,7 +43,9 @@ itemQuants["techreborn:chemical_reactor"] = {}
 itemQuants["techreborn:chemical_reactor"][1] = {}
 itemQuants["techreborn:chemical_reactor"][1][1] = {"minecraft:blaze_powder",1}
 itemQuants["techreborn:chemical_reactor"][1][2] = {"minecraft:ender_pearl",1}
-
+itemQuants["techreborn:chemical_reactor"][2] = {}
+itemQuants["techreborn:chemical_reactor"][2][1] = {"minecraft:redstone",32}
+itemQuants["techreborn:chemical_reactor"][2][2] = {"minecraft:diamond",1}
 
 
 
