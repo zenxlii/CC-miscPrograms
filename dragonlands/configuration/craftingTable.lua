@@ -43,6 +43,9 @@ addRecipe({"create:vertical_gearbox",1},64,{"create:gearbox"})
 --Create Components
 addRecipe({"create:brass_hand",1},64,{nil,n.andAlloy,nil,n.brassP,n.brassP,n.brassP,nil,n.brassP})
 addRecipe({n.eTube,1},64,{"create:polished_rose_quartz",nil,nil,n.ironP})
+addRecipe({"create:filter",1},64,{n.ironN,"minecraft:white_wool",n.ironN})
+addRecipe({"create:brass_nugget",9},64,{n.brass})
+addRecipe({"create:attribute_filter",1},64,{"create:brass_nugget","minecraft:white_wool","create:brass_nugget"})
 
 addRecipe({"create:metal_girder",8},64,{n.ironP,n.ironP,n.ironP,n.andAlloy,n.andAlloy,n.andAlloy})
 addRecipe({"create:metal_bracket",4},64,{n.ironN,n.ironN,n.ironN,n.iron,n.andAlloy,n.iron})
