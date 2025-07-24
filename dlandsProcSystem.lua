@@ -130,6 +130,7 @@ mowl["techreborn:sapphire_small_dust"] = "2x2"
 mowl["techreborn:red_garnet_small_dust"] = "2x2"
 mowl["techreborn:peridot_small_dust"] = "2x2"
 mowl["techreborn:galena_small_dust"] = "2x2"
+mowl["techreborn:titanium_small_dust"] = "2x2"
 
 --1x1 Crafting
 mowl["minecraft:raw_iron_block"] = "1x1"
@@ -140,6 +141,7 @@ mowl["minecraft:raw_copper_block"] = "1x1"
 mowl["techreborn:galena_dust"] = "ibf"
 mowl["techreborn:aluminum_dust"] = "ibf"
 mowl["techreborn:cell#c710b4dd5e1644e960c4f1a12c0147f9"] = "ibf"
+mowl["techreborn:titanium_dust"] = "ibf"
 
 --Bulk Washing
 mowl["create:crushed_raw_iron"] = "bwa"
