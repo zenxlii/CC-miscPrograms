@@ -45,6 +45,9 @@ addRecipe({"create:vertical_gearbox",1},64,{"create:gearbox"})
 
 addRecipe({"create:water_wheel",1},64,{n.plank,n.plank,n.plank,n.plank,n.shaft,n.plank,n.plank,n.plank,n.plank})
 addRecipe({"create:large_water_wheel",1},64,{n.plank,n.plank,n.plank,"create:water_wheel",n.shaft,n.plank,n.plank,n.plank,n.plank})
+addRecipe({"create:fluid_pipe",4},64,{n.copperP,n.copper,n.copperP})
+addRecipe({"create:smart_fluid_pipe",1},64,{n.brassP,nil,nil,"create:fluid_pipe",nil,nil,n.eTube})
+addRecipe({"create:mechanical_pump",1},64,{n.cog,"create:fluid_pipe"})
 --Create Components
 addRecipe({"create:brass_hand",1},64,{nil,n.andAlloy,nil,n.brassP,n.brassP,n.brassP,nil,n.brassP})
 addRecipe({n.eTube,1},64,{"create:polished_rose_quartz",nil,nil,n.ironP})
