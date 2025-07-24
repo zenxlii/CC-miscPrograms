@@ -136,6 +136,7 @@ mowl["techreborn:titanium_small_dust"] = "2x2"
 mowl["minecraft:raw_iron_block"] = "1x1"
 mowl["minecraft:raw_gold_block"] = "1x1"
 mowl["minecraft:raw_copper_block"] = "1x1"
+mowl["techreborn:zinc_ingot"] = "1x1"
 
 --Industrial Blast Furnaces
 mowl["techreborn:galena_dust"] = "ibf"
