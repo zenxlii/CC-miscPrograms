@@ -102,6 +102,8 @@ addRecipe({"techreborn:launchpad",1},64,{"techreborn:magnalium_plate","techrebor
 addRecipe({"techreborn:industrial_centrifuge",1},64,{n.aluminiumP,n.aCircuit,n.aluminiumP,n.amFrame,"techreborn:extractor",n.amFrame,n.aluminiumP,n.aCircuit,n.aluminiumP})
 addRecipe({"techreborn:industrial_electrolyzer",1},64,{n.ironP,"techreborn:extractor",n.ironP,n.aCircuit,n.amFrame,n.aCircuit,n.ironP,"techreborn:extractor",n.ironP})
 addRecipe({"techreborn:chemical_reactor",1},64,{n.invarP,"techreborn:extractor",n.invarP,n.aCircuit,"techreborn:compressor",n.aCircuit,n.invarP,"techreborn:extractor",n.invarP})
+
+addRecipe({"techreborn:chunk_loader",1},64,{n.bronzeP,"techreborn:coal_plate",n.goldP,"techreborn:lapis_plate",n.imFrame,n.nickelP,"techreborn:obsidian_plate","techreborn:quartz_plate","techreborn:redstone_plate"})
 --Tech Reborn Multiblocks
 addRecipe({"techreborn:basic_machine_casing",4},64,{n.aluminiumP,n.aluminiumP,n.aluminiumP,n.eCircuit,n.bmFrame,n.eCircuit,n.aluminiumP,n.aluminiumP,n.aluminiumP})
 addRecipe({"techreborn:advanced_machine_casing",4},64,{n.steelP,n.steelP,n.steelP,n.aCircuit,n.amFrame,n.aCircuit,n.steelP,n.steelP,n.steelP})
