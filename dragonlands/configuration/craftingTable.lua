@@ -82,6 +82,8 @@ addRecipe({"techreborn:carbon_mesh",1},64,{"techreborn:carbon_fiber","techreborn
 addRecipe({"techreborn:mixed_metal_ingot",5},64,{n.invar,n.invar,n.invar,n.brass,n.brass,n.brass,n.aluminium,n.aluminium,n.aluminium})
 addRecipe({"techreborn:reinforced_glass",7},64,{n.glass,n.glass,n.glass,"techreborn:lead_plate",n.glass,"techreborn:lead_plate",n.glass,n.glass,n.glass})
 addRecipe({"techreborn:red_cell_battery",1},16,{nil,n.copperIC,nil,n.lead,n.rs,n.lead,n.lead,n.rs,n.lead})
+--Tech Reborn Upgrades
+addRecipe({"techreborn:overclocker_upgrade",1},64,{"techreborn:water_coolant_cell_10k","techreborn:water_coolant_cell_10k","techreborn:water_coolant_cell_10k",n.copperIC,n.eCircuit,n.copperIC})
 --Tech Reborn Generators
 addRecipe({"techreborn:solid_fuel_generator",1},1,{"techreborn:red_cell_battery",n.bmFrame,n.furnace})
 addRecipe({"techreborn:thermal_generator",1},64,{n.invarP,n.invarP,n.invarP,n.invarP,"techreborn:reinforced_glass",n.invarP,n.eCircuit,"techreborn:solid_fuel_generator",n.eCircuit})
