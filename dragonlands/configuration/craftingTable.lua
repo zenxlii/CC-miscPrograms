@@ -73,6 +73,7 @@ addRecipe({"create:controls",1},64,{"minecraft:lever",nil,nil,n.tCasing,nil,nil,
 --Tech Reborn Components
 addRecipe({n.bmFrame,1},64,{n.refIron,n.refIron,n.refIron,n.refIron,nil,n.refIron,n.refIron,n.refIron,n.refIron})
 addRecipe({n.amFrame,1},64,{nil,"techreborn:carbon_plate",nil,n.aAlloyP,n.bmFrame,n.aAlloyP,nil,"techreborn:carbon_plate"})
+addRecipe({n.imFrame,1},64,{n.chromeP,"techreborn:titanium_plate",n.chromeP,"techreborn:titanium_plate",n.amFrame,"techreborn:titanium_plate",n.chromeP,"techreborn:titanium_plate",n.chromeP})
 addRecipe({n.treetap,1},16,{nil,n.stick,nil,n.plank,n.plank,n.plank,n.plank})
 addRecipe({n.cell,4},64,{nil,n.tin,nil,n.tin,nil,n.tin,nil,n.tin})
 addRecipe({"techreborn:basic_display",1},64,{n.refIronP,n.blackDye,n.refIronP,n.blackDye,n.eCircuit,n.blackDye,n.refIronP,n.glassP,n.refIronP})
