@@ -12,7 +12,7 @@ end
 --User-Defined Recipes
 
 --Below is an example recipe.
-addRecipe(n.cobble. 64, "techreborn:storage_unit_68", 2)
+addRecipe(n.cobble, 64, "techreborn:storage_unit_68", 2)
 --Final Return Statement
 
 return{
