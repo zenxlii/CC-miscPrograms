@@ -20,6 +20,8 @@ addRecipe({"techreborn:obsidian_dust",4},64,{{n.obsidian,1}})
 addRecipe({n.glowstone,4},64,{{n.glowstoneB,1}})
 addRecipe({"techreborn:coal_dust",1},64,{{"minecraft:coal",1}})
 addRecipe({"techreborn:quartz_dust",1},64,{{n.quartz,1}})
+addRecipe({n.gravel,1},64,{{n.cobble,1}})
+addRecipe({n.sand,1},64,{{n.gravel,1}})
 
 --Final Return Statement
 
