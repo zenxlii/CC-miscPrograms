@@ -29,6 +29,8 @@ addRecipe({"minecraft:lever",1},64,{n.stick,nil,nil,n.cobble})
 addRecipe({"minecraft:hopper",1},64,{n.iron,nil,n.iron,n.iron,n.chest,n.iron,nil,n.iron})
 addRecipe({"minecraft:bricks",1},64,{"minecraft:brick","minecraft:brick",nil,"minecraft:brick","minecraft:brick"})
 addRecipe({"minecraft:cauldron",1},64,{n.iron,nil,n.iron,n.iron,nil,n.iron,n.iron,n.iron,n.iron})
+--Concrete Powder
+
 --ComputerCraft Stuff
 addRecipe({"computercraft:cable",6},64,{nil,n.stone,nil,n.stone,n.rs,n.stone,nil,n.stone})
 addRecipe({"computercraft:wired_modem",1},64,{n.stone,n.stone,n.stone,n.stone,n.rs,n.stone,n.stone,n.stone,n.stone})
@@ -56,6 +58,7 @@ addRecipe({n.eTube,1},64,{"create:polished_rose_quartz",nil,nil,n.ironP})
 addRecipe({"create:filter",1},64,{n.ironN,"minecraft:white_wool",n.ironN})
 addRecipe({"create:brass_nugget",9},64,{n.brass})
 addRecipe({"create:attribute_filter",1},64,{"create:brass_nugget","minecraft:white_wool","create:brass_nugget"})
+addRecipe({"create:propeller",1},64,{nil,n.ironP,nil,n.ironP,n.andAlloy,n.ironP,nil,n.ironP})
 
 addRecipe({"create:metal_girder",8},64,{n.ironP,n.ironP,n.ironP,n.andAlloy,n.andAlloy,n.andAlloy})
 addRecipe({"create:metal_bracket",4},64,{n.ironN,n.ironN,n.ironN,n.iron,n.andAlloy,n.iron})
