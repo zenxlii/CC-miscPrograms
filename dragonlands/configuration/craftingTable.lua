@@ -30,7 +30,13 @@ addRecipe({"minecraft:hopper",1},64,{n.iron,nil,n.iron,n.iron,n.chest,n.iron,nil
 addRecipe({"minecraft:bricks",1},64,{"minecraft:brick","minecraft:brick",nil,"minecraft:brick","minecraft:brick"})
 addRecipe({"minecraft:cauldron",1},64,{n.iron,nil,n.iron,n.iron,nil,n.iron,n.iron,n.iron,n.iron})
 --Concrete Powder
-
+local dyePre = "minecraft:"
+local dyePost = "_dye"
+local concPPost = "_concrete_powder"
+local dyeColours = {"white","orange","magenta","light_blue","yellow","lime","pink","gray","light_gray","cyan","purple","blue","brown","green","red","black"}
+for _, colour in ipairs(dyeColours) do
+	addRecipe({dyePre..colour..concPPost,8},64,{dyePre..colour..dyePost,n.sand,n.gravel,n.sand,n.gravel,n.sand,n.gravel,n.sand,n.gravel})
+end
 --ComputerCraft Stuff
 addRecipe({"computercraft:cable",6},64,{nil,n.stone,nil,n.stone,n.rs,n.stone,nil,n.stone})
 addRecipe({"computercraft:wired_modem",1},64,{n.stone,n.stone,n.stone,n.stone,n.rs,n.stone,n.stone,n.stone,n.stone})
