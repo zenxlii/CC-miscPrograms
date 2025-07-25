@@ -27,6 +27,7 @@ table.insert(condenseTable, {"create:copper_nugget", "3x3", "minecraft:copper_in
 table.insert(condenseTable, {"minecraft:copper_ingot", "3x3", "minecraft:copper_block", 64})
 table.insert(condenseTable, {"minecraft:clay_ball", "2x2", "minecraft:clay", 64})
 table.insert(condenseTable, {"minecraft:rotten_flesh", "3x3", "blockus:rotten_flesh_block", 64})
+table.insert(condenseTable, {"minecraft:slime_ball", "3x3", "minecraft:slime_block", 64})
 table.insert(condenseTable, {"minecraft:ender_pearl", "3x3", "charm:ender_pearl_block", 16})
 table.insert(condenseTable, {"create:zinc_nugget", "3x3", "create:zinc_ingot", 64})
 table.insert(condenseTable, {"create:zinc_ingot", "3x3", "create:zinc_block", 64})
