@@ -46,6 +46,7 @@ fs.delete("recipes/deployer.lua")
 fs.delete("recipes/assemblyLines.lua")
 fs.delete("recipes/stonecutting.lua")
 fs.delete("recipes/chemicalReactor.lua")
+fs.delete("recipes/infiniteRetrieve.lua")
 fs.delete("configFiles/storageList.lua")
 
 --And download the new ones.
@@ -68,6 +69,7 @@ downloadFile("recipes/deployer.lua", "deployer.lua")
 downloadFile("recipes/assemblyLines.lua", "assemblyLines.lua")
 downloadFile("recipes/stonecutting.lua", "stonecutting.lua")
 downloadFile("recipes/chemicalReactor.lua", "chemicalReactor.lua")
+downloadFile("recipes/infiniteRetrieve.lua, infiniteRetrieve.lua")
 downloadFile("configFiles/storageList.lua", "storageList.lua")
 
 print("Config replacement is done!")
