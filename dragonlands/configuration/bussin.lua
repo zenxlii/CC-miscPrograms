@@ -46,7 +46,11 @@ machBlock4Out["target"] = "minecraft:barrel_71"
 machBlock4Out["specificSlots"] = false
 table.insert(taskTable, machBlock4Out)
 
-
+local machBlock5Out = {}
+machBlock5Out["taskType"] = "import"
+machBlock5Out["target"] = "minecraft:chest_5"
+machBlock5Out["specificSlots"] = false
+table.insert(taskTable, machBlock5Out)
 
 return{
 taskTable = taskTable
