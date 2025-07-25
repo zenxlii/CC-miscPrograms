@@ -69,7 +69,7 @@ downloadFile("recipes/deployer.lua", "deployer.lua")
 downloadFile("recipes/assemblyLines.lua", "assemblyLines.lua")
 downloadFile("recipes/stonecutting.lua", "stonecutting.lua")
 downloadFile("recipes/chemicalReactor.lua", "chemicalReactor.lua")
-downloadFile("recipes/infiniteRetrieve.lua, infiniteRetrieve.lua")
+downloadFile("recipes/infiniteRetrieve.lua", "infiniteRetrieve.lua")
 downloadFile("configFiles/storageList.lua", "storageList.lua")
 
 print("Config replacement is done!")
