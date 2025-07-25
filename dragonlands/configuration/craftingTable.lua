@@ -66,6 +66,7 @@ addRecipe({"create:metal_bracket",4},64,{n.ironN,n.ironN,n.ironN,n.iron,n.andAll
 addRecipe({"create:deployer",1},64,{n.eTube,nil,nil,n.aCasing,nil,nil,"create:brass_hand"})
 addRecipe({"create:mechanical_saw",1},64,{nil,n.ironP,nil,n.ironP,n.iron,n.ironP,nil,n.aCasing})
 addRecipe({"create:mechanical_press",1},64,{n.shaft,nil,nil,n.aCasing,nil,nil,"minecraft:iron_block"})
+addRecipe({"create:encased_fan",1},64,{n.shaft,nil,nil,n.aCasing,nil,nil,"create:propeller"})
 
 addRecipe({"create:mechanical_crafter",3},64,{n.eTube,nil,nil,n.bCasing,nil,nil,n.cTable})
 --Create Trains
